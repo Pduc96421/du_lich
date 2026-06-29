@@ -10,7 +10,7 @@ import ScrollToTop from './components/ScrollToTop';
 import { persistor, store } from './store';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
-import { ConfigProvider } from 'antd';
+import { ConfigProvider, App as AntdApp } from 'antd';
 import { themeConfig } from './theme.config';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import { QueryClientProvider } from "@tanstack/react-query";
@@ -26,9 +26,11 @@ function App() {
               <Router>
                 <ScrollToTop/>
                 <ConfigProvider locale={viVN} theme={themeConfig}>
-                  <div className="App">
-                    <AppRoutes />
-                  </div>
+                  <AntdApp>
+                    <div className="App">
+                      <AppRoutes />
+                    </div>
+                  </AntdApp>
                 </ConfigProvider>
               </Router>
             </GoogleOAuthProvider>

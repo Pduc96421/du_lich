@@ -1,0 +1,1599 @@
+HỌC VIỆN CÔNG NGHỆ BƯU CHÍNH VIỄN THÔNG
+KHOA CÔNG NGHỆ THÔNG TIN 1
+………………………………….
+ĐỒ ÁN TỐT NGHIỆP
+Đề tài: Hệ thống Website bán tour du lịchGiảng viên hướng dẫn: TS. Phan Thị HàNhóm: 06Thành viên 1:Vũ Anh Tuấn – B21DCCN763Thành viên 2: Đào Xuân Trí – B21DCCN721Thành viên 3: Hà Quang Trung – B21DCCN727Đề tài: Hệ thống Website bán tour du lịchGiảng viên hướng dẫn: TS. Phan Thị HàNhóm: 06Thành viên 1:Vũ Anh Tuấn – B21DCCN763Thành viên 2: Đào Xuân Trí – B21DCCN721Thành viên 3: Hà Quang Trung – B21DCCN727
+Đề tài: Hệ thống Website bán tour du lịch
+Giảng viên hướng dẫn: TS. Phan Thị Hà
+Nhóm: 06
+Thành viên 1:Vũ Anh Tuấn – B21DCCN763
+Thành viên 2: Đào Xuân Trí – B21DCCN721
+Thành viên 3: Hà Quang Trung – B21DCCN727
+Đề tài: Hệ thống Website bán tour du lịch
+Giảng viên hướng dẫn: TS. Phan Thị Hà
+Nhóm: 06
+Thành viên 1:Vũ Anh Tuấn – B21DCCN763
+Thành viên 2: Đào Xuân Trí – B21DCCN721
+Thành viên 3: Hà Quang Trung – B21DCCN727
+Hà Nội, 2025
+NHẬN XÉT
+(Của giảng viên hướng )
+................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+LỜI CẢM ƠN
+Sau quá trình học tập và rèn luyện trong suốt 4,5 năm tại trường, nhóm chúng em đã tích lũy được nhiều kiến thức và kinh nghiệm quý báu để hoàn thành đồ án tốt nghiệp với đề tài “Hệ thống Website bán tour du lịch”. Để có thể hoàn thành đề tài này, ngoài sự nỗ lực của các thành viên, chúng em đã nhận được rất nhiều sự hỗ trợ và giúp đỡ từ quý thầy cô và nhà trường.
+Trước hết, nhóm xin gửi lời cảm ơn chân thành và sâu sắc nhất đến TS. Phan Thị Hà, người đã tận tình hướng dẫn, định hướng chuyên môn và luôn tạo điều kiện thuận lợi để chúng em hoàn thành tốt đồ án. Những góp ý quý báu, sự tận tâm và trách nhiệm của cô là nền tảng quan trọng giúp nhóm hoàn thiện đề tài một cách khoa học và hiệu quả.
+Nhóm cũng xin chân thành cảm ơn các thầy cô trong khoa đã truyền đạt cho chúng em những kiến thức bổ ích trong suốt thời gian học tập. Những bài giảng, kinh nghiệm và sự hỗ trợ của quý thầy cô đã giúp chúng em có được nền tảng vững chắc để thực hiện và phát triển đề tài.
+Bên cạnh đó, chúng em xin gửi lời cảm ơn đến gia đình và bạn bè đã luôn động viên, khích lệ và tạo điều kiện cho chúng em trong suốt quá trình học tập cũng như khi thực hiện đồ án.
+Cuối cùng, nhóm thực hiện nhóm 06 xin gửi lời cảm ơn đến tất cả những ai đã giúp đỡ, hỗ trợ và đồng hành cùng chúng em trong suốt thời gian qua. Mặc dù đã cố gắng hoàn thiện đề tài một cách tốt nhất, nhưng chắc chắn vẫn không tránh khỏi thiếu sót. Nhóm rất mong nhận được những ý kiến đóng góp quý báu để đề tài được hoàn thiện hơn.
+Xin trân trọng cảm ơn!
+MỤC LỤC
+MỤC LỤC HÌNH ẢNHv
+DANH MỤC BẢNG BIỂUviii
+PHÂN CÔNG CÔNG VIỆCx
+MỞ ĐẦUxi
+CHƯƠNG 1: CƠ SỞ LÝ THUYẾT1
+1.1 Tổng quan về hệ thống1
+1.2 Kiến trúc hệ thống – Monolithic Architecture1
+1.3 Kiến trúc Backend1
+1.3.1 Tổng quan Backend1
+1.3.2 Công nghệ sử dụng cho Backend1
+1.4 Kiến trúc Frontend1
+1.4.1 Tổng quan Frontend1
+1.4.2 Công nghệ sử dụng cho Frontend1
+1.5 RASA chatbot1
+1.5.1 Tổng quan về Rasa1
+1.5.2 Luồng xử lý tin nhắn với Rasa1
+1.6 Tổng kết chương1
+CHƯƠNG 2: XÂY DỰNG NỘI DUNG CHO RASA CHATBOT2
+2.1 Phân tích yêu cầu và thiết kế nội dung cho rasa chatbot2
+2.1.1 Mục tiêu và phạm vi của chatbot:2
+2.1.2 Xác định các chức năng chính và phân tích chi tiết:2
+2.1.3 Thiết kế luồng hội thoại:2
+2.2 Xây dựng dữ liệu nội dung2
+2.3 Xây dựng dữ liệu cho NLU2
+         2.3.1 Một số Intent cần thiết:2
+2.3.2 Xác định các Entities cần thiết:3
+2.3.3 Mối liên hệ giữa Intent và Entity:4
+2.4 Xây dựng Actions4
+2.4.1 Gợi ý tour du lịch thông thường:4
+2.4.2 Gợi ý tour du lịch cho cá nhân:5
+2.4.3 Trả địa chỉ của một địa danh5
+2.4.4 Gợi ý địa điểm theo tỉnh/thành6
+2.4.5 Gợi ý tour du lịch cho một địa danh cụ thể6
+2.4.6 Gợi ý địa điểm theo chủ đề6
+2.4.7 Trả địa chỉ mua đặc sản7
+2.4.8 Gợi ý đặc sản theo tỉnh/thành7
+2.4.9 Reset ngữ cảnh hội thoại7
+2.5 Tổng kết chương8
+CHƯƠNG 3: PHÂN TÍCH VÀ THIẾT KẾ HỆ THỐNG8
+3.1 Mô tả hệ thống8
+3.1.1 Mục đích8
+3.1.2 Phạm vi8
+3.1.3 Mô tả thông tin chung9
+3.1.4 Thông tin về người dùng và chức năng10
+3.2 Phân tích12
+3.2.1 Mô tả nghiệp vụ chức năng12
+3.2.2 Trích các lớp thực thể của hệ thống53
+3.3 Thiết kế cơ sở dữ liệu:55
+3.4 Thiết kế chi tiết từng chức năng56
+3.4.1 Chức năng của khách hàng:56
+3.4.2 Chức năng của quản lý, nhân viên, hướng dẫn viên du lịch:61
+3.2.3 Chức năng tự động phân công cho hướng dẫn viên:69
+3.5 Tổng kết chương71
+CHƯƠNG 4: CÀI ĐẶT VÀ THỬ NGHIỆM HỆ THỐNG72
+4.1 Công cụ cài đặt, triển khai và thư viện hỗ trợ:72
+         4.1.1 Công cụ cài đặt:72
+4.1.2 Công cụ triển khai:72
+4.1.3 Thư viện hỗ trợ:74
+4.2 Kiến trúc hệ thống:74
+4.3 Mô hình hệ thống:76
+4.4 Kết quả đạt được:80
+4.4.1 Chức năng của khách hàng:80
+4.4.2 Chức năng của nhân viên, quản lý, hướng dẫn viên du lịch:87
+4.5 Tổng kết chương:95
+KẾT LUẬN97
+TÀI LIỆU THAM KHẢO98
+MỤC LỤC HÌNH ẢNH
+Hinh 1. 1 Kiến trúc hệ thống – Monolithic Architecture1
+Hinh 1. 2 Luồng xử lý Rasa Chatbot [19]1
+Hình 3. 1 Sơ đồ Use case tổng quan hệ thống12
+Hình 3. 2 Sơ đồ Use case cho chức năng đăng nhập12
+Hình 3. 3 Sơ đồ Use case cho chức năng xem danh sách tour13
+Hình 3. 4 Sơ đồ Use case cho chức năng quản lý thông tin cá nhân15
+Hình 3. 5 Sơ đồ Use case thay đổi mật khẩu17
+Hình 3. 6 Sơ đồ Use case chức năng trò chuyện chatbot19
+Hình 3. 7 Sơ đồ Use case xem thông báo20
+Hình 3. 8 Sơ đồ Use case chức năng xem đơn hàng21
+Hình 3. 9 Sơ đồ Use case chức năng thanh toán đơn hàng24
+Hình 3. 10 Sơ đồ Use case chức năng quản lý đơn hàng27
+Hình 3. 11 Sơ đồ Use case hỗ trợ người dùng34
+Hình 3. 12 Sơ đồ Use case chức năng xem phân công35
+Hình 3. 13 Sơ đồ Use case chức năng quản lý thống kê37
+Hình 3. 14 Sơ đồ Use case quản lý người dùng40
+Hình 3. 15 Sơ đồ Use case quản lý tour du lịch43
+Hình 3. 16 Sơ đồ Use case xem tour được phân công.52
+Hình 3. 17 Sơ đồ lớp thực thể hệ thống55
+Hình 3. 18 Sơ đồ cơ sở dữ liệu hệ thống56
+Hình 3. 19 Sơ đồ tuần tự chức năng đăng nhập bằng email và mật khẩu57
+Hình 3. 20 Sơ đồ tuần tự chức năng đăng nhập bằng Google57
+Hình 3. 21 Sơ đồ tuần tự chức năng cập nhật thông tin cá nhân58
+Hình 3. 22 Sơ đồ tuần tự chức năng xem danh sách tour du lịch58
+Hình 3. 23 Sơ đồ tuần tự xem chi tiết một tour du lịch58
+Hình 3. 24 Sơ đồ tuần tự cho chức năng đặt tour du lịch-159
+Hình 3. 25 Sơ đồ tuần tự chức năng đặt tour du lịch-259
+Hình 3. 26 Sơ đồ tuần tự chức năng xem đơn hàng59
+Hình 3. 27 Sơ đồ tuần tự chức năng xem vé60
+Hình 3. 28 Sơ đồ tuần tự chức năng chat với chatbot các câu hỏi đi kèm60
+Hình 3. 29 Sơ đồ tuần tự chức năng chat với chatbot các câu hỏi về tour61
+Hình 3. 30 Sơ đồ tuần tự chức năng gửi feedback61
+Hình 3. 31 Sơ đồ tuần tự chức năng đăng nhập phía admin62
+Hình 3. 32 Sơ đồ tuần tự chức năng cập nhật thông tin62
+Hình 3. 33 Sơ đồ tuần tự chức năng cập nhật trạng thái khách hàng62
+Hình 3. 34 Sơ đồ tuần tự chức năng cập nhật vai trò nhân viên63
+Hình 3. 35 Sơ đồ tuần tự chức năng thêm mới nhân viên63
+Hình 3. 36 Sơ đồ tuần tự chức năng hủy đơn hàng64
+Hình 3. 37 Sơ đồ tuần tự chức năng thêm mã giảm giá64
+Hình 3. 38 Sơ đồ tuần tự chức năng cập nhật mã giảm giá65
+Hình 3. 39 Sơ đồ tuần tự chức năng thêm mới tour65
+Hình 3. 40 Sơ đồ tuần tự chức năng cập nhật tour66
+Hình 3. 41 Sơ đồ luồng tuần tự chức năng xóa tour66
+Hình 3. 42 Sơ đồ tuần tự chức năng thêm mới danh mục67
+Hình 3. 43 Sơ đồ tuần tự chức năng cập nhật danh mục67
+Hình 3. 44 Sơ đồ tuần tự chức năng xem thống kê theo doanh thu68
+Hình 3. 45 Sơ đồ tuần tự chức năng xem thống kê tour68
+Hình 3. 46 Sơ đồ tuần tự chức năng thống kê theo doanh thu69
+Hình 3. 47 Sơ đồ tuần tự chức năng xem tour được phân công69
+Hình 3. 48 Mô hình hệ thống Client-Server77
+Hình 4. 1 Giao diện đăng nhập khách hàng80
+Hình 4. 2 Giao diện đăng ký khách hàng81
+Hình 4. 3 Giao diện trang chủ hệ thống81
+Hình 4. 4 Giao diện trang chủ hệ thống phần đề xuất tour82
+Hình 4. 5 Giao diện xem chi tiết tour du lịch82
+Hình 4. 6 Giao diện xem danh sách tour du lịch83
+Hình 4. 7 Giao diện tìm kiếm theo bộ lọc83
+Hình 4. 8 Giao diện đặt hàng84
+Hình 4. 9 Giao diện xem đơn hàng84
+Hình 4. 10 Giao diện xem vé85
+Hình 4. 11 Trang thanh toán sử dụng Mono85
+Hình 4. 12 Giao diện xem thông báo86
+Hình 4. 13 Giao diện phản hồi về phía quản lý86
+Hình 4. 14 Giao diện nhắn tin chatbot87
+Hình 4. 15 Giao diện đăng nhập admin87
+Hình 4. 16 Giao diện quản lý người dùng hệ thống88
+Hình 4. 17 Giao diện quản lý nhân viên88
+Hình 4. 18 Giao diện quản lý khách hàng89
+Hình 4. 19 Giao diện thêm nhân viên mới89
+Hình 4. 20 Giao diện xem đơn hàng90
+Hình 4. 21 Giao diện xem mã giảm giá90
+Hình 4. 22 Giao diện xem thống kê về doanh thu91
+Hình 4. 23 Giao diện xem thống kê các tour du lịch91
+Hình 4. 24 Giao diện xem thống kê tour du lịch – dựa theo doanh thu92
+Hình 4. 25 Giao diện xem thống kê tour dựa theo đánh giá người dùng92
+Hình 4. 26 Giao diện xem thống kê người dùng dựa vào doanh thu93
+Hình 4. 27 Giao diện quản lý tour du lịch93
+Hình 4. 28 Giao diện cập nhật thông tin94
+Hình 4. 29 Giao diện quản lý danh mục94
+Hình 4. 30 Giao diện xem hướng dẫn viên của tour95
+Hình 4. 31 Giao diện xem hướng dẫn viên95
+Hình 4. 32 Giao diện xem tour hướng dẫn của hướng dẫn viên95
+DANH MỤC BẢNG BIỂU
+Bảng 3. 1 Bảng mô tả chi tiết chức năng đăng nhập13
+Bảng 3. 2 Mô tả chi tiết cho chức năng xem chi tiết tour du lịch13
+Bảng 3. 3 Mô tả chi tiết cho chức năng tìm kiếm tour du lịch14
+Bảng 3. 4 Mô tả chi tiết chức năng quản lý thông tin cá nhân15
+Bảng 3. 5 Mô tả chi tiết chức năng đổi mật khẩu17
+Bảng 3. 6 Mô tả chi tiết chức năng trò chuyện chatbot19
+Bảng 3. 7 Mô tả chi tiết chức năng xem thông báo21
+Bảng 3. 8 Mô tả chi tiết chức năng xem đơn hàng đã đặt22
+Bảng 3. 9 Mô tả chi tiết chức năng đánh giá đơn hàng.22
+Bảng 3. 10 Mô tả chi tiết chức năng thanh toán đơn hàng24
+Bảng 3. 11 Mô tả chi tiết chức năng cập nhật thông tin đơn hàng27
+Bảng 3. 12 Mô tả chi tiết chức năng xem chi tiết đơn hàng28
+Bảng 3. 13 Mô tả chi tiết tìm kiếm đơn hàng29
+Bảng 3. 14 Mô tả chi tiết chức năng cập nhật mã giảm giá30
+Bảng 3. 15 Mô tả chi tiết chức năng thêm mã giảm giá31
+Bảng 3. 16 Mô tả chi tiết xóa mã giảm giá33
+Bảng 3. 17 Mô tả chi tiết chức năng hỗ trợ người dùng34
+Bảng 3. 18 Mô tả chi tiết chức năng xem tour được phân công35
+Bảng 3. 19 Mô tả chi tiết chức năng xem hướng dẫn viên của tour36
+Bảng 3. 20 Mô tả chi tiết chức năng thống kê khách hàng theo doanh thu37
+Bảng 3. 21 Mô tả chi tiết chức năng thống kê doanh thu theo tour38
+Bảng 3. 22 Mô tả chi tiết chức năng thống kê theo doanh thu39
+Bảng 3. 23 Mô tả chi tiết chức năng cập nhật trạng thái khách hàng40
+Bảng 3. 24 Mô tả chi tiết chức năng thêm mới nhân viên41
+Bảng 3. 25 Mô tả chi tiết chức năng thêm mới tour du lịch44
+Bảng 3. 26 Mô tả chi tiết chức năng cập nhật tour du lịch45
+Bảng 3. 27 Mô tả chi tiết chức năng xóa tour du lịch47
+Bảng 3. 28 Mô tả chi tiết chức năng thêm mới một danh mục48
+Bảng 3. 29 Mô tả chi tiết chức năng cập nhật danh mục49
+Bảng 3. 30 Mô tả chi tiết chức năng xóa danh mục51
+Bảng 3. 31 Mô tả chi tiết chức năng xem tour được phân công.52
+Từ viết tắt
+Tên đầy đủ
+API
+Application Programming Interface
+MVC
+Model – View – Controller
+REST
+Representational State Transfer
+HTTP
+HyperText Transfer Protocol
+JWT
+HyperText Transfer Protocol
+ORM
+Object Relational Mapping
+UI
+User Interface
+UX
+User Experience
+SPA
+Single Page Application
+NLU
+Natural Language Understanding
+NLP
+Natural Language Processing
+RASA
+Open-source Conversational AI Framework
+CRUD
+Create – Read – Update – Delete
+DB
+Database
+SQL
+Structured Query Language
+JSON
+JavaScript Object Notation
+Socket.io
+Socket Input/Output
+AI
+Artificial Intelligence
+CND
+Content Delivery Network
+PHÂN CÔNG CÔNG VIỆC
+Vũ Anh Tuấn – B21DCCN763
+Backend, chatbot
+Đào Xuân Trí – B21DCCN721
+Frontend, phân tích thiết kế
+Hà Quang Trung – B21DCCN727
+Backend, chatbot, phân tích thiết kế
+MỞ ĐẦU
+ Lý do chọn đề tài:
+Du lịch đang phát triển mạnh, nhu cầu đặt tour trực tuyến tăng. Việc quản lý và bán tour truyền thống gặp nhiều hạn chế: khó tiếp cận khách hàng, quy trình thủ công, thiếu minh bạch, và khó mở rộng. Hệ thống bán tour trực tuyến giúp khách hàng dễ dàng tìm kiếm, so sánh và đặt tour; doanh nghiệp quản lý hiệu quả, tự động hóa quy trình, và mở rộng thị trường. Với công nghệ web hiện đại, việc xây dựng một hệ thống tích hợp thanh toán, thông báo real-time, và quản lý đa cấp là cần thiết và khả thi. Vậy nên nhóm chúng em đã chọn đề tài "Hệ thống Website bán tour du lịch" nhằm tạo một giải pháp số hóa toàn diện, góp phần nâng cao trải nghiệm khách hàng và hiệu quả kinh doanh trong ngành du lịch.
+ Mục đích đề tài:
+Mục đích của đề tài là xây dựng một hệ thống bán tour du lịch trực tuyến giúp tối ưu trải nghiệm người dùng, cho phép tìm kiếm và đặt tour nhanh chóng, tích hợp thanh toán và thông báo real-time. Đồng thời, hệ thống hỗ trợ doanh nghiệp quản lý tour, đơn hàng và khách hàng một cách tự động, hiệu quả, góp phần số hóa hoạt động kinh doanh du lịch.
+ Bố cục đồ án:
+Chương 1: Cơ sở lý thuyết:
+Trình bày về các công nghệ sử dụng Backend với Node.js/Express, MySQL, JWT + Google OAuth, Socket.IO real-time và thanh toán MoMo; Frontend dùng React + TypeScript, Ant Design, Tailwind và Cloudinary. 
+Chương 2: Xây dựng rasa chatbot.
+Trình bày về xây dựng chatbot.
+Chương 3: Phân tích và thiết kế hệ thống bán tour du lịch.
+Tập chung vào phân tích và đưa ra các thiết kế chi tiết của hệ thống.
+Chương 4: Cài đặt thử nghiệm hệ thống.
+Thể hiện kết quả hệ thống.
+CHƯƠNG 1: CƠ SỞ LÝ THUYẾT
+Tổng quan về hệ thống
+Trong bối cảnh chuyển đổi số mạnh mẽ hiện nay, các hệ thống phần mềm quản lý và cung cấp dịch vụ trực tuyến đóng vai trò quan trọng trong việc tối ưu hóa hoạt động của doanh nghiệp cũng như nâng cao trải nghiệm của người dùng. Để đáp ứng nhu cầu về tốc độ xử lý, bảo mật thông tin, khả năng mở rộng, và khả năng tương tác real-time, các giải pháp công nghệ hiện đại đã trở thành yếu tố then chốt trong quá trình xây dựng và vận hành hệ thống.
+Hệ thống sử dụng kiến trúc Monolithic được xây dựng dựa trên mô hình Client – Server, trong đó Frontend chịu trách nhiệm giao tiếp trực tiếp với người dùng, còn Backend thực hiện xử lý nghiệp vụ, kết nối cơ sở dữ liệu và cung cấp API cho các thành phần khác. Việc tách biệt hai lớp này mang lại các lợi ích:
+Dễ dàng mở rộng (Scalability): Có thể phát triển thêm tính năng mà không ảnh hưởng tới các thành phần khác.
+Tối ưu hiệu suất: Giao diện được tải nhanh trong khi backend xử lý logic nghiệp vụ một cách độc lập.
+Đảm bảo bảo mật: Backend kiểm soát dữ liệu, xác thực và phân quyền truy cập.
+Dễ bảo trì: Việc sửa lỗi, cập nhật hoặc thay đổi công nghệ của một lớp không làm gián đoạn toàn bộ hệ thống.
+Hệ thống hướng đến mục tiêu:
+- Xây dựng giao diện trực quan, thân thiện, tốc độ tải nhanh.
+- Cung cấp API rõ ràng, chuẩn REST, giúp dễ dàng tích hợp với các dịch vụ khác.
+- Đảm bảo tính bảo mật dữ liệu với các cơ chế mã hóa và xác thực hiện đại.
+- Hỗ trợ realtime, thanh toán trực tuyến, quản lý tập trung dữ liệu và hiệu quả.
+- Để đạt được những yêu cầu trên, hệ thống áp dụng một tập hợp công nghệ hiện đại, bao gồm React.js, TypeScript, Node.js, Express.js, MySQL, Sequelize ORM, JWT, OAuth 2.0, Socket.IO, MoMo Payment Gateway,… Mỗi công nghệ đảm nhiệm một vai trò cụ thể và đóng góp vào việc xây dựng hệ thống mạnh mẽ, linh hoạt, bảo mật và thân thiện với người dùng.
+Kiến trúc hệ thống – Monolithic Architecture
+Hinh 1. 1 Kiến trúc hệ thống – Monolithic Architecture
+a) Tổng quan kiến trúc:
+Kiến trúc nguyên khối, hay còn được gọi là kiến trúc Monolithic (Monolithic architecture) [1], là một mô hình kiến trúc phần mềm nguyên khối trong đó toàn bộ ứng dụng được xây dựng và triển khai như một hệ thống duy nhất. Thông thường, một Monolithic có cấu trúc gồm ba tầng là database, user interface và server-side. Trong mô hình này, các module hoạt động một cách liên kết, phụ thuộc vào nhau và mọi sự thay đổi, bảo trì đều được thực hiện trên cùng một đơn vị.
+b) Ưu điểm:
+- Thiết kế đơn giản và triển khai, vận hành dễ dàng: Do tất cả các thành phần được tích hợp trong một mã nguồn duy nhất, việc phát triển, xây dựng, và triển khai ứng dụng trở nên đơn giản hơn.
+- Dễ dàng test và debug: Có thể test toàn bộ ứng dụng một cách dễ dàng và tìm kiếm lỗi trong môi trường đồng nhất.
+- Hiệu suất cao trong các ứng dụng ít phức tạp: Các ứng dụng ít phức tạp có thể chạy hiệu quả với kiến trúc monolithic do giảm thiểu giao tiếp mạng và độ trễ.
+c) Nhược điểm:
+- Khó khăn khi scale ứng dụng: Khi ứng dụng phát triển quy mô, việc quản lý trở nên phức tạp.
+- Độ tin cậy thấp: Khi một component trong hệ thống bị lỗi có thể ảnh hưởng tới toàn bộ ứng dụng, làm giảm độ tin cậy của hệ thống.
+- Thiếu linh hoạt với thay đổi: Các thành phần chức năng thường được gắn kết chặt chẽ, làm cho việc tái cấu trúc hay thay đổi một phần nhỏ trở nên khó khăn.
+Kiến trúc Backend
+1.3.1 Tổng quan Backend
+Backend là phần người dùng không thể nhìn thấy được, có nhiệm vụ xử lý các nghiệp vụ phức tạp ở phía sau giúp phần front end hoạt động trơn tru.
+a) Node.js
+Node.js [2] là một môi trường runtime JavaScript chạy trên server, cho phép lập trình viên sử dụng JavaScript để xây dựng các ứng dụng server-side. Node.js dựa trên cơ chế event-driven, non-blocking I/O, giúp xử lý nhiều kết nối đồng thời một cách hiệu quả và tối ưu cho các ứng dụng có yêu cầu thời gian thực (real-time), như nhắn tin hay thông báo.
+b) Express.js
+Express.js [3] là framework nhẹ, linh hoạt, giúp xây dựng web server và RESTful API một cách nhanh chóng. Nó cung cấp các công cụ mạnh mẽ như routing để định nghĩa các endpoint và xử lý các phương thức HTTP (GET, POST, PUT, DELETE…), cùng với middleware cho phép thêm các chức năng trung gian như xác thực, logging hay xử lý lỗi trước khi gửi phản hồi về client.
+Cách thức hoạt động:
+- Request từ client đi qua các middleware để xử lý xác thực, logging, phân tích dữ liệu.
+- Sau đó, Express định tuyến (routing) đến controller tương ứng, nơi xử lý nghiệp vụ và gọi các service để xử lý logic và tương tác với model để thao tác với cơ sở dữ liệu.
+- Kết quả được trả về client dưới dạng JSON.
+Lợi ích khi sử dụng Express.js:
+- Phát triển nhanh: Tối giản boilerplate, dễ tạo endpoints chuẩn REST.
+- Tách biệt trách nhiệm: Middleware, routers, controllers và services giúp code rõ ràng và dễ bảo trì.
+- Mở rộng linh hoạt: Dễ thêm middleware, plugin(các module mở rộng cung cấp tính năng bổ sung như bảo mật, logging, kết nối cơ sở dữ liệu…) hoặc tích hợp các công nghệ mới mà không ảnh hưởng toàn bộ hệ thống.
+- Hiệu suất cao: Khi kết hợp với Node.js non-blocking I/O một kỹ thuật lập trình cho phép một luồng (thread) tiếp tục thực thi các công việc khác thay vì bị "treo" và chờ đợi thao tác I/O (như đọc/ghi file, mạng) hoàn thành, Express xử lý đồng thời nhiều request mà không làm nghẽn server.
+- Hỗ trợ thời gian thực: Có thể tích hợp dễ dàng với WebSocket hoặc Socket.IO để thực hiện nhắn tin, thông báo, cập nhật trạng thái theo thời gian thực.
+- Nhờ sự kết hợp Node.js + Express.js, backend của hệ thống vừa nhanh, nhẹ, vừa mở rộng dễ dàng, đồng thời hỗ trợ các tính năng thời gian thực và bảo mật dữ liệu. Đây là nền tảng lý tưởng cho các ứng dụng web hiện đại, từ SPA (ứng dụng web chỉ tải một trang HTML duy nhất, sau đó cập nhật nội dung động mà không cần tải lại trang, giúp trải nghiệm người dùng mượt mà) đến hệ thống quản lý dữ liệu phức tạp.
+1.3.2 Công nghệ sử dụng cho Backend
+a) Node.js và Express
+Node.js là môi trường chạy JavaScript phía server, cho phép lập trình viên sử dụng một ngôn ngữ duy nhất cho phía frontend và backend. Điểm nổi bật của Node.js nằm ở mô hình bất đồng bộ, cho phép xử lý đồng thời nhiều yêu cầu với hiệu năng cao giúp xử lý đồng thời nhiều yêu cầu với hiệu năng cao.
+Trên nền tảng đó, Express.js đóng vai trò là một web framework tối giản và linh hoạt, cung cấp các chức năng cốt lõi để xây dựng ứng dụng web và API. Express hỗ trợ cơ chế routing để định nghĩa các endpoint, lớp middlewares dùng để xử lý các tác vụ như xác thực, ghi log, phân tích dữ liệu đầu vào, đồng thời cho phép tích hợp với các template engine khi cần render giao diện phía server. Nhờ Express.js, việc xây dựng các RESTful API trở nên rõ ràng, có tổ chức và dễ mở rộng.
+b) TypeScript
+TypeScript [4] là ngôn ngữ mở rộng của JavaScript, bổ sung cơ chế static typing một cơ chế nơi kiểu dữ liệu của biến được xác định ngay khi viết code và được biên dịch (transpile) về JavaScript trước khi chạy. Việc hỗ trợ kiểu tĩnh cho phép kiểm tra và phát hiện lỗi ngay tại thời điểm biên dịch, giúp giảm thiểu lỗi runtime và tăng độ ổn định của hệ thống.
+TypeScript tăng cường khả năng IntelliSense một tính năng giúp gợi ý mã, kiểm tra type tự động, đồng thời đóng vai trò như tài liệu hóa nội bộ vì cấu trúc dữ liệu (interface, type, class) được định nghĩa minh bạch. Ngôn ngữ cũng hỗ trợ đầy đủ các đặc tính hướng đối tượng như class, interface, generic, access modifiers, giúp tổ chức mã nguồn backend theo kiến trúc rõ ràng, dễ mở rộng và bảo trì.
+Lợi ích chính khi sử dụng TypeScript:
+- Phát hiện lỗi sớm: nhờ kiểm tra type tại compile-time, hạn chế lỗi runtime.
+- Tăng khả năng bảo trì: type giúp mã nguồn rõ ràng, dễ đọc, dễ refactor.
+- IntelliSense mạnh mẽ: hỗ trợ tự động hoàn thành, gợi ý tham số, mô tả hàm.
+- Tối ưu cho dự án lớn: giúp tổ chức code rõ ràng thông qua interface, enum.
+c) Sequelize ORM
+Sequelize [5] là ORM (Object-Relational Mapping) dành cho Node.js, cho phép làm việc với cơ sở dữ liệu quan hệ bằng các class và phương thức JavaScript thay vì SQL thuần. Sequelize hỗ trợ định nghĩa model, tự động ánh xạ dữ liệu, xây dựng truy vấn, quản lý migration và thiết lập các mối quan hệ giữa bảng. Nó cũng tích hợp transaction và cơ chế bảo vệ trước SQL Injection, giúp lập trình viên thao tác với database hiệu quả, an toàn và nhất quán.
+d) MySQL Database
+MySQL [6] là hệ quản trị cơ sở dữ liệu quan hệ (RDBMS) phổ biến, ổn định và có khả năng mở rộng cao. MySQL đảm bảo tính toàn vẹn dữ liệu thông qua ACID, hỗ trợ xử lý truy vấn nhanh và ổn định ngay cả khi hệ thống lưu trữ lượng dữ liệu lớn. Với độ tin cậy đã được kiểm chứng, MySQL phù hợp cho các hệ thống yêu cầu tính nhất quán và hiệu suất cao.
+Các lợi ích:
+- Hiệu suất cao: Xử lý dữ liệu lớn nhanh chóng.
+- Mở rộng dễ dàng: Hỗ trợ scale-up hoặc scale-out khi cần.
+- Ổn định và đã được chứng minh: Công nghệ mature, đáng tin cậy cho các hệ thống quy mô từ nhỏ đến lớn.
+e) Authentication & Authorization [7]
+Trong hệ thống, cơ chế xác thực và phân quyền người dùng được xây dựng dựa trên hai kỹ thuật cốt lõi là JSON Web Token (JWT) và Bcrypt. Hai công nghệ này phối hợp với nhau để đảm bảo quá trình đăng nhập, kiểm tra quyền hạn và bảo vệ thông tin người dùng diễn ra an toàn và chính xác.
+JWT – Cơ chế xác thực không trạng thái (stateless)
+JWT là phương thức xác thực phổ biến trong các hệ thống web hiện đại nhờ đặc tính stateless – server không cần lưu phiên làm việc (session) của người dùng. Thay vào đó, mọi thông tin xác thực được mã hóa và đặt bên trong một token duy nhất.
+Khi người dùng gửi yêu cầu đăng nhập, backend kiểm tra thông tin và tạo ra một JWT gồm ba phần:
+- Header: mô tả thuật toán mã hóa,
+- Payload: chứa các thông tin cần thiết như userId, email, role,
+- Signature: đảm bảo token không bị chỉnh sửa.
+Token này được gửi lại cho client và lưu trữ trong localStorage hoặc cookie. Ở các request tiếp theo, client gửi kèm token trong phần Authorization Header. Backend sẽ giải mã token để xác định danh tính và quyền hạn của người dùng trước khi xử lý yêu cầu.
+Cách tiếp cận này giúp giảm tải cho server, dễ dàng mở rộng khi hệ thống có nhiều người dùng truy cập đồng thời.
+Bcrypt – Bảo vệ mật khẩu bằng mã hóa một chiều
+Trong quá trình xử lý đăng ký hoặc thay đổi mật khẩu, hệ thống sử dụng Bcrypt để mã hóa mật khẩu trước khi lưu vào cơ sở dữ liệu. Bcrypt áp dụng cơ chế hashing kết hợp salt, nghĩa là mỗi mật khẩu sẽ được tạo một chuỗi salt ngẫu nhiên rồi mới mã hóa. Điều này giúp:
+- Tránh bị giải mã ngược vì hashing là một chiều,
+- Chống lại tấn công rainbow table,
+- Đảm bảo ngay cả khi hai người dùng có cùng mật khẩu, hash lưu trong database vẫn khác nhau.
+Ngoài ra, Bcrypt cho phép điều chỉnh cost factor – tham số quyết định mức độ phức tạp của thuật toán mã hóa. Cost càng lớn, mật khẩu càng khó bị phá nhưng thời gian xử lý cũng dài hơn. Điều này giúp hệ thống cân bằng được giữa bảo mật và hiệu suất.
+f) Real-time Communication
+Socket.IO là thư viện hỗ trợ giao tiếp thời gian thực (real-time communication) giữa client và server. Sử dụng giao thức WebSocket khi khả dụng, và tự động fallback về các cơ chế khác (như HTTP long-polling) nếu WebSocket không thể kết nối.
+Socket.IO cho phép truyền dữ liệu hai chiều, giúp server và client gửi nhận thông tin liên tục mà không cần reload trang. Thư viện còn hỗ trợ rooms để nhóm client và events để xử lý các sự kiện theo cơ chế event-driven trong đó luồng xử lý của chương trình được điều khiển bởi các sự kiện (events) thay vì chạy tuần tự theo thứ tự lệnh.
+Trong hệ thống backend, Socket.IO được sử dụng để:
+- Thông báo ngay lập tức (notifications) cho các sự kiện hệ thống.
+- Cập nhật trạng thái đơn hàng hoặc dữ liệu liên tục mà không cần client gửi request thủ công.
+Nhờ cơ chế real-time này, trải nghiệm người dùng được cải thiện, tăng tính tương tác và phản hồi nhanh chóng từ hệ thống.
+Kiến trúc Frontend
+1.4.1 Tổng quan Frontend
+Front-end là phần giao diện của website nơi mà người dùng cuối có thể nhìn thấy và tương tác trực tiếp. Tất cả những gì có thể nhìn thấy trên website bao gồm: màu sắc, hình ảnh, văn bản, đồ thị, bảng biểu,… được gọi là phần front-end của trang web. 
+1.4.2 Công nghệ sử dụng cho Frontend
+a) React
+React [8] là một thư viện JavaScript được thiết kế theo mô hình component-based, cho phép chia giao diện thành các thành phần độc lập, dễ tái sử dụng và dễ kiểm soát. Đồng thời, luồng dữ liệu một chiều (unidirectional data flow) đảm bảo các thay đổi dữ liệu trong ứng dụng được dự đoán và kiểm soát một cách nhất quán, hạn chế lỗi liên quan đến trạng thái giao diện. React cũng hỗ trợ Hooks, giúp quản lý state cục bộ, xử lý các tác vụ bất đồng bộ và side effects, từ đó giảm độ phức tạp của code và tăng khả năng tái sử dụng logic giữa các component.
+b) Virtual DOM
+Virtual DOM [9] là một bản sao lưu trữ trong bộ nhớ của các phần tử DOM thật. Thay vì tương tác trực tiếp với DOM thật, vốn có thể chậm và tốn kém về hiệu suất, React tạo ra một bản sao ảo của các thành phần giao diện người dùng. Bản sao ảo này là một đối tượng JavaScript nhẹ, phản ánh cấu trúc của DOM thật. Cơ chế Virtual DOM của React giúp tối ưu hóa quá trình render giao diện, giảm thiểu việc thao tác trực tiếp với DOM thực, từ đó nâng cao hiệu suất.
+Khác biệt giữa DOM thật và Virtual DOM: Nếu là DOM thật thì đại diện cho toàn bộ tài liệu HTML dưới dạng cấu trúc cây và cho phép JavaScript thao tác và thay đổi các tài liệu HTML. Đôi khi, khi những thay đổi đó xảy ra, toàn bộ tài liệu có thể được kết xuất lại còn với Virtual DOM thì ngược lại vì sử dụng thuật toán diff để so sánh các phiên bản cập nhật hiện tại và trước đó của DOM. Nó chỉ kết xuất lại các phần của giao diện người dùng đã thay đổi, thay vì toàn bộ.
+Quy trình hoạt động của Virtual DOM:
+– Kết xuất ban đầu: khi ứng dụng khởi động, toàn bộ giao diện người dùng được biểu diễn dưới dạng Virtual DOM. Các phần tử React được tạo và kết xuất vào cấu trúc ảo.
+– Thay đổi trạng thái và Props: khi trạng thái và props thay đổi trong ứng dụng, React kết xuất lại các thành phần bị ảnh hưởng trong Virtual DOM. Những thay đổi này không ảnh hưởng ngay lập tức đến DOM thật.
+– So sánh sử dụng thuật toán Diff: React sau đó sử dụng thuật toán diff để so sánh phiên bản hiện tại của Virtual DOM với phiên bản trước đó. Quá trình này xác định sự khác biệt (hoặc "diffs") giữa hai phiên bản.
+– Quy trình đối chiếu: Dựa trên những khác biệt được xác định, React xác định cách hiệu quả nhất để cập nhật DOM thật. Chỉ những phần của DOM thật cần được cập nhật mới bị thay đổi, thay vì kết xuất lại toàn bộ giao diện người dùng. Việc cập nhật có chọn lọc này diễn ra nhanh chóng và hiệu quả.
+– Cập nhật DOM thật: Cuối cùng, React áp dụng các thay đổi cần thiết cho DOM thật. Điều này có thể bao gồm thêm, xóa hoặc cập nhật các phần tử dựa trên sự khác biệt được phát hiện ở bước 3.
+c) Một số thư viện hỗ trợ
+- Redux Toolkit [10]: Công cụ quản lý trạng thái tập trung, giúp đồng bộ dữ liệu giữa các component React và xử lý các tác vụ bất đồng bộ (async logic) hiệu quả. Redux Toolkit cung cấp các cơ chế như slice, thunk và DevTools để tối ưu hóa quản lý state trong ứng dụng lớn.
+- React Router DOM [11]: Thư viện điều hướng cho các ứng dụng SPA, hỗ trợ định tuyến động, nested routes, protected routes, giúp tổ chức cấu trúc giao diện phức tạp một cách mạch lạc và chuyển trang mượt mà mà không cần tải lại toàn bộ trang.
+- Ant Design [12]: Bộ component UI chuẩn hóa, cung cấp sẵn các thành phần giao diện như form, table, modal, date picker. Giúp rút ngắn thời gian phát triển và đảm bảo tính đồng nhất trong thiết kế trải nghiệm người dùng.
+- Axios [13]: Công cụ HTTP client để frontend giao tiếp với backend thông qua REST API. Hỗ trợ các cơ chế xử lý lỗi, interceptor, chuyển đổi dữ liệu và quản lý request bất đồng bộ.
+- Socket.IO Client [14]: Hỗ trợ giao tiếp thời gian thực, cho phép frontend nhận dữ liệu cập nhật liên tục, như nhắn tin, thông báo hoặc trạng thái đơn hàng, nâng cao tính tương tác của ứng dụng.
+- Zod [15]: Thư viện kiểm tra và xác thực cấu trúc dữ liệu (schema validation), đảm bảo dữ liệu từ form hoặc API tuân thủ định dạng và các quy tắc đã định nghĩa, giảm thiểu lỗi runtime và tăng tính an toàn của ứng dụng.
+- Cloudinary [16]: Là nền tảng quản lý tài nguyên đa phương tiện trên nền tảng đám mây, cho phép lưu trữ, xử lý và phân phối hình ảnh/video một cách hiệu quả thông qua API.
+RASA chatbot
+1.5.1 Tổng quan về Rasa
+a) Khái niệm
+Rasa [17] là một nền tảng mã nguồn mở chuyên dụng để phát triển chatbot và trợ lý ảo AI. Được thiết kế để tạo ra các hệ thống có khả năng giao tiếp thông minh và linh hoạt, Rasa giúp các nhà phát triển dễ dàng xây dựng và triển khai các ứng dụng hội thoại. Nền tảng Rasa cung cấp hai thành phần chính: Rasa NLU (Natural Language Understanding) để xử lý ngôn ngữ tự nhiên và Rasa Core để quản lý hội thoại và luồng giao tiếp với người dùng.
+Với khả năng xử lý dữ liệu ngôn ngữ một cách chính xác, Rasa không chỉ được sử dụng rộng rãi trong các doanh nghiệp mà còn trong các lĩnh vực như chăm sóc khách hàng, y tế, tài chính, và nhiều ngành khác.
+b) Các Thành Phần Chính Của Rasa
+Rasa NLU [18] (Natural Language Understanding): Rasa NLU là công cụ xử lý ngôn ngữ tự nhiên của Rasa, có nhiệm vụ phân tích và hiểu yêu cầu của người dùng. NLU giúp chatbot nhận diện ý định (intent) của người dùng và thực thể (entity) trong tin nhắn, từ đó cung cấp phản hồi chính xác và phù hợp.
+Rasa Core: Rasa Core là công cụ quản lý hội thoại trong hệ thống chatbot, giúp xác định luồng giao tiếp dựa trên ngữ cảnh và ý định của người dùng. Core có khả năng học hỏi từ các hội thoại trước đó để cải thiện phản hồi và hướng dẫn chatbot tương tác một cách thông minh, mang đến trải nghiệm tự nhiên và liên tục cho người dùng.
+c) Lợi ích khi sử dụng RASA chatbot:
+- Giúp cung cấp các trải nghiệm tốt hơn cho người dùng, có thể cung cấp cho người dùng các thông tin cần thiết nhanh chóng với tính chính  xác cao.
+- Việc sử dụng RASA chatbot giúp cho giảm được công việc lặp đi lặp lại cho các nhân viên hỗ trợ để tập chung vào những công việc khác quan trọng hơn đồng thời nâng cao hiệu suất làm việc.
+1.5.2 Luồng xử lý tin nhắn với Rasa
+Hinh 1. 2 Luồng xử lý Rasa Chatbot [19]
+Khi người dùng gửi một tin nhắn vào hệ thống chatbot, Rasa sẽ thực hiện ba giai đoạn xử lý chính: xác định ý định (Intent Classification), trích xuất thực thể (Entity Extraction) và dự đoán hành động tiếp theo (Action Prediction). Ba bước này phối hợp với nhau để giúp chatbot hiểu được câu hỏi
+- Intent Classification (Phân loại ý định): Intent Classification là bước nhận diện mục đích tổng quát của câu hội thoại. Về mặt kỹ thuật, đây là một bài toán phân loại văn bản: hệ thống ánh xạ một chuỗi ký tự đầu vào thành một nhãn ý định (intent) trong tập nhãn đã được định nghĩa trước. Mô hình phân loại thường được huấn luyện trên tập dữ liệu gồm các câu mẫu gắn nhãn, sử dụng các biểu diễn từ (word embedding, subword, hoặc contextual embeddings) và kiến trúc học máy/học sâu phù hợp. Kết quả của bước này không những cung cấp nhãn ý định mà còn kèm theo thang đo độ tin cậy (confidence score), thông tin cần thiết để bước quyết định hành động tiếp theo có thể xử lý hoặc chuyển sang cơ chế fallback nếu mức độ tin cậy thấp.
+- Entity Extraction (Trích xuất thực thể): Entity Extraction là quá trình xác định và phân loại các thành phần thông tin có cấu trúc (entities) xuất hiện trong câu hội thoại — tức là các phần dữ liệu cần thiết để thực thi hành động nghiệp vụ. Về phương pháp, đây là một bài toán sequence labeling hoặc span extraction, sử dụng các kỹ thuật như CRF, BiLSTM-CRF, Transformer-based taggers hoặc các bộ phân tích dựa trên biểu thức chính quy kết hợp. Thuật toán trả về vị trí và loại của từng thực thể cùng với thông tin xác suất, cho phép hệ thống gán giá trị cho các slot hay tham số nghiệp vụ. Entity Extraction cung cấp dữ liệu chi tiết để action có thể thực thi đúng chức năng mà intent đã chỉ ra.
+- Action Prediction (Dự đoán hành động / Quyết định): Action Prediction là bước ra quyết định dựa trên ngữ cảnh hội thoại tổng hợp: bao gồm lịch sử tương tác được lưu trong tracker (slots, intents, entities, actions trước đó) cùng các quy tắc hay mô hình chính sách (policies). Mục tiêu của bước này là chọn một hành động thích hợp nhất từ tập các hành động có thể thực hiện (utterances, forms, custom actions, v.v.). Việc lựa chọn được thực hiện thông qua kết hợp giữa các cơ chế quy tắc (rule-based), tra cứu mẫu (memoization) và mô hình học máy (policy learning) để tối ưu hóa tính nhất quán, chính xác và kinh nghiệm người dùng trong luồng hội thoại. Kết quả của action prediction là lệnh thực thi tiếp theo — hoặc trả lời trực tiếp, hoặc gọi action server để thực thi logic nghiệp vụ — rồi cập nhật tracker để duy trì ngữ cảnh cho các bước sau.
+Tổng kết chương
+Chương này trình bày các khái niệm và công nghệ nên tảng đuọc sử dụng để phát triển hệ thống. Những lý thuyết này cung cấp kiến thức nền tảng cần thiết cho thiết kế và xây dựng hệ thống, từ cơ sở này để tiến hành phân tích và thiết kế cho chương 2.
+CHƯƠNG 2: XÂY DỰNG NỘI DUNG CHO RASA CHATBOT
+Phân tích yêu cầu và thiết kế nội dung cho rasa chatbot
+2.1.1 Mục tiêu và phạm vi của chatbot:
+- Mục tiêu chính: Xây dựng chatbot tư vấn tour du lịch tự động, hỗ trợ khách hàng. Giảm tải cho đội ngũ tư vấn viên, cung cấp thông tin nhanh chóng, tăng trải nghiệm khách hàng.
+- Phạm vi hoạt động: Tư vấn tour trong nước, cung cấp thông tin địa điểm du lịch, tư vấn đặc sản vùng miền.
+- Chức năng chính: Tư vấn và gợi ý tour du lịch
+- Chức năng thêm: Cung cấp thông tin địa điểm, đặc sản, thu thập thông tin tour.
+- Giới hạn: Chỉ tư vấn, không hỗ trợ thanh toán trực tiếp.
+- Ngôn ngữ: Tiếng Việt.
+- Đối tượng sử dụng: Khách hàng sử dụng hệ thống.
+2.1.2 Xác định các chức năng chính và phân tích chi tiết:
+a) Gợi ý tour du lịch:
+Gợi ý tour chung:
+- Mục đích: Hiển thị danh sách tour phổ biến, tour đang hot.
+- Kịch bản: Người dùng chưa có điểm đến cụ thể, muốn xem các tour có sẵn.
+- Dữ liệu cần: Danh sách tour từ cơ sở dữ liệu, sắp xếp theo độ phổ biến/đánh giá.
+Gợi ý tour cá nhân:
+- Mục đích: Gợi ý tour dựa trên sở thích cá nhân của người dùng.
+- Thông tin cần thu thập: Điểm đến, ngân sách, thời gian, số lượng người.
+- Logic: Lọc tour từ dữ liệu theo các tiêu chí, sắp xếp theo độ phù hợp.
+- Xử lý trường hợp: Không có tour phù hợp → gợi ý tour tương tự hoặc hỏi lại tiêu chí.
+b) Cung cấp thông tin địa điểm du lịch:
+Hỏi địa chỉ địa danh:
+- Mục đích: Trả về địa chỉ cụ thể của một địa danh du lịch.
+- Dữ liệu: Từ dữ liệu về địa điểm du lịch, tìm kiếm theo tên địa điểm.
+Hỏi địa điểm nổi bật theo tỉnh:
+- Mục đích: Gợi ý các địa điểm du lịch nổi bật trong một tỉnh/thành phố.
+- Dữ liệu: Lọc từ dữ liệu của địa điểm du lịch theo tỉnh, sắp xếp theo độ nổi tiếng.
+Gợi ý địa điểm theo chủ đề:
+- Mục đích: Gợi ý địa điểm theo chủ đề du lịch (biển, núi, văn hóa, ẩm thực...).
+- Logic: Lọc theo `travel_theme` trong dữ liệu địa điểm.
+Gợi ý tour cho địa danh:
+- Mục đích: Khi người dùng hỏi về một địa danh, gợi ý các tour liên quan.
+- Logic: Tìm tour trong dữ liệu hệ thống có khớp với địa danh.
+c) Tư vấn theo đặc sản vùng miền:
+Hỏi đặc sản theo tỉnh:
+- Mục đích: Gợi ý các đặc sản nổi tiếng của một tỉnh/thành phố:   
+- Dữ liệu: Từ dữ liệu về đặc sản, lọc theo tỉnh.
+Hỏi địa chỉ mua đặc sản:
+- Mục đích: Cung cấp địa chỉ cụ thể để mua đặc sản.
+- Dữ liệu: Từ dữ liệu về đặc sản, trả về thông tin địa chỉ mua.
+2.1.3 Thiết kế luồng hội thoại:
+Luồng hội thoại cơ bản: Người dùng chào hỏi → Tư vấn/Trả lời câu hỏi → Thu thập thông tin (nếu cần đặt tour) → Xác nhận thông tin → Kết thúc.
+Hỏi tour du lịch: Người dùng chào hỏi → Hỏi tour chung → Hiển thị danh sách tour phổ biến → Kết thúc.
+Hỏi địa điểm và tour du lịch liên quan: Người dùng hỏi địa điểm nổi tiếng theo tỉnh → Hiển thị danh sách địa điểm → Hỏi tour cho địa điểm đó → Hiển thị tour liên quan → Kết thúc.
+Hỏi về đặc sản từng nơi: Người dùng hỏi đặc sản theo tỉnh → Hiển thị danh sách đặc sản → Hỏi địa chỉ mua đặc sản → Hiển thị địa chỉ cụ thể → Kết thúc.
+Các câu hỏi không hiểu: Người dùng hỏi câu hỏi lạ → Ghi log câu hỏi → Trả lời fallback (gợi ý hỏi lại) → Kết thúc hoặc chờ câu hỏi mới.
+Xây dựng dữ liệu nội dung
+a) Dữ liệu tour du lịch 
+- Cấu trúc dữ liệu tour: mã tour du lịch, tên tour du lịch, điểm đến, giá, đánh giá, mô tả.
+- Dữ liệu: Được lấy từ thông tin các tour du lịch từ trong cơ sở dữ liệu hệ thống.
+- Được sử dụng cho việc hỗ trợ tư vấn cho tour 
+b) Dữ liệu địa điểm du lịch (đia_diem_du_lich.py)
+- Cấu trúc dữ liệu: Tổ chức theo tỉnh/thành phố, mỗi tỉnh có danh sách địa điểm riêng.
+- Thông tin mỗi địa điểm: tên, địa chỉ, mô tả, chủ đề (biển, núi, văn hóa...).
+- Phương pháp thu thập: Liệt kê địa điểm theo từng tỉnh → Thu thập tên và địa chỉ → Nhập vào file.
+c) Dữ liệu đặc sản (dac_san_tung_noi.py)
+- Cấu trúc dữ liệu: Tổ chức theo tỉnh/thành phố, mỗi tỉnh có danh sách đặc sản riêng.
+- Thông tin mỗi đặc sản: tên, địa chỉ mua, mô tả.
+- Phương pháp thu thập: Liệt kê đặc sản theo từng tỉnh → Thu thập tên và địa chỉ mua → Nhập vào file.
+Xây dựng dữ liệu cho NLU
+2.3.1 Một số Intent cần thiết:
+Intent chào hỏi:
+- `greet`: Chào hỏi, bắt đầu hội thoại
+- `goodbye`: Tạm biệt, kết thúc hội thoại
+Intent tư vấn tour:
+- `ask_tour_general`: Hỏi tour chung, không có yêu cầu cụ thể
+- `ask_tour_personalized`: Hỏi tour với yêu cầu cụ thể (điểm đến, ngân sách...)
+- `ask_more_tours`: Hỏi thêm tour khác
+- `ask_list_tours`: Yêu cầu liệt kê danh sách tour
+Intent hỏi địa điểm:
+- `ask_place_address`: Hỏi địa chỉ của một địa danh cụ thể
+- `ask_top_places_city`: Hỏi địa điểm nổi tiếng theo tỉnh/thành
+- `ask_place_by_theme`: Hỏi địa điểm theo chủ đề (biển, núi, văn hóa...)
+- `ask_tour_for_place`: Hỏi tour cho một địa danh cụ thể
+Intent hỏi đặc sản:
+- `ask_food_specialty`: Hỏi đặc sản theo tỉnh/thành
+- `ask_food_address`: Hỏi địa chỉ mua đặc sản
+Intent đặt tour:
+- `provide_destination`: Cung cấp điểm đến
+- `provide_budget`: Cung cấp ngân sách
+- `provide_travel_time`: Cung cấp thời gian du lịch
+- `provide_contact_info`: Cung cấp thông tin liên hệ
+- `provide_group_size`: Cung cấp số lượng người
+Intent xác nhận:
+- `affirm`: Đồng ý, xác nhận
+- `deny`: Từ chối, phủ định
+- `change_mind`: Thay đổi ý định
+Intent khác:
+- `ask_agency_info`: Hỏi thông tin đại lý
+- `ask_promotion`: Hỏi về khuyến mãi
+2.3.2 Xác định các Entities cần thiết:
+- Entity `destination`: Điểm đến du lịch sử dụng lọc tour theo điểm đến.
+- Entity `specialty` : Tên đặc sản sử dụng để tìm địa chỉ mua đặc sản hoặc gợi ý đặc sản theo tên.
+- Entity `province`: Tỉnh/thành phố sử dụng để tìm địa điểm, đặc sản theo tỉnh
+- Entity `travel_theme`: Chủ đề du lịch dùng để gợi ý địa điểm theo chủ đề
+- Entity `traveler_name`: Tên khách hàng để lưu vào form đặt tour.
+- Entity `phone_number`: Số điện thoại sử dụng để lưu vào form đặt tour.
+- Entity `group_size`: Số lượng người dùng để vào form đặt tour.
+2.3.3 Mối liên hệ giữa Intent và Entity:
+- Intent `ask_tour_general`: Có thể có thực thể `province`.
+- Intent `ask_tour_personalized`: Sử dụng các thực thể `province`, `group_size`.
+- Intent `provide_destination`: Sử dụng thực thể `province`
+- Intent `ask_place_address`: Sử dụng thực thể `destination`.
+- Intent `ask_top_places_city`: Sử dụng thực thể `province`.
+- Intent `ask_place_by_theme`: Sử dụng thực thể `travel_theme`.
+- Intent `ask_tour_for_place`: Sử dụng thực thể `destination`.
+- Intent `ask_food_specialty`: Sử dụng thực thể `province`.
+- Intent `ask_food_address`: Sử dụng các thực thể `specialty`, `province`.
+- Intent `provide_contact_info`: Sử dụng  thực thể `traveler_name`, `phone_number`.
+- Intent `provide_group_size`: Sử dụng thực thể `group_size`.
+- Intent `greet`: Có thể có thực thể `traveler_name`.
+Xây dựng Actions
+2.4.1 Gợi ý tour du lịch thông thường: 
+Action chịu trách nhiệm gợi ý các tour du lịch “phù hợp nói chung” cho người dùng, trong trường hợp người dùng chỉ hỏi các câu kiểu “cho mình xem tour”, mà chưa đưa ra yêu cầu cá nhân hóa cụ thể (điểm đến, ngân sách chi tiết…).
+Intents trong kịch bản:
+- Intent chính: `ask_tour_general` – người dùng chủ động hỏi về tour du lịch một cách tổng quát.
+- Các intent phụ: `greet` (chào hỏi trước khi xin tư vấn), `provide_travel_time`, `provide_budget` (có thể bổ sung thêm thời gian, ngân sách sau đó), `ask_promotion`, `ask_agency_info` (hỏi thêm về khuyến mãi, thông tin đại lý), `provide_contact_info`, `affirm`, `deny`, `goodbye` (khi chuyển sang đặt tour du lịch hoặc kết thúc hội thoại).
+Entities liên quan:
+- `destination`: điểm đến (có thể đã tồn tại trong một vài ngữ cảnh).
+- `traveler_name`, `phone_number`, `group_size`: được sử dụng nếu sau phần gợi ý tour du lịch, hệ thống chuyển sang luồng form đặt tour du lịch.
+2.4.2 Gợi ý tour du lịch cho cá nhân:
+Cung cấp danh sách các tour du lịch đã được cá nhân hóa dựa trên các tiêu chí cụ thể mà người dùng đưa ra, như: điểm đến mong muốn, khoảng ngân sách, thời gian đi, số lượng người.
+Intents trong kịch bản:
+- Intent chính: `ask_tour_personalized` – người dùng yêu cầu gợi ý tour du lịch theo tiêu chí cá nhân.
+- Các intent phụ: `provide_destination`, `provide_travel_time`, `provide_budget`; `greet`, `ask_tour_general`; `ask_promotion`, `ask_agency_info`; `provide_contact_info`, `affirm`, `deny`, `goodbye`.
+Entities liên quan:
+- `destination`: điểm đến cụ thể mà người dùng muốn (Sapa, Đà Lạt, Phú Quốc…).
+- Có thể tận dụng thêm `traveler_name`, `group_size` để cá nhân hóa cách xưng hô và gợi ý (gợi ý tour du lịch phù hợp cho “gia đình 4 người”, “nhóm bạn trẻ”…).
+2.4.3 Trả địa chỉ của một địa danh
+Khi người dùng hỏi về địa chỉ của một địa danh, action này có nhiệm vụ trả về địa chỉ tương ứng của địa danh du lịch đó.
+Intent trong kịch bản: intent `ask_place_address` – các câu hỏi dạng “Địa chỉ Vịnh Hạ Long ở đâu?”, “Hồ Hoàn Kiếm nằm chỗ nào?”.
+Entities liên quan:
+- Có thể sử dụng thuộc tính `destination` nếu file nlu đã trích xuất tên địa danh.
+- Nếu không có tính rõ ràng, action có thể dùng đoạn tin nhắn cuối cùng để tìm tên địa danh trong cấu trúc dữ liệu dựa trên file địa điểm du lịch, với cơ chế khớp một phần.
+2.4.4 Gợi ý địa điểm theo tỉnh/thành
+Gợi ý một danh sách các địa điểm du lịch nổi bật trong một tỉnh/thành cụ thể mà người dùng quan tâm.
+Intent trong kịch bản: intent `ask_top_places_city` – các câu hỏi như “Ở Đà Lạt nên đi đâu?”, “Cho mình vài địa điểm nổi bật ở Hà Nội”.
+Entities liên quan:
+- `province`: tỉnh/thành mà người dùng hỏi tới (Hà Nội, Đà Nẵng, Đà Lạt, Huế…).
+- Action sẽ resolve tỉnh/thành qua alias (tên thường dùng, không dấu) rồi lấy danh sách địa điểm tương ứng trong từ trong file địa điểm du lịch.
+2.4.5 Gợi ý tour du lịch cho một địa danh cụ thể
+Khi người dùng hỏi và trong câu hỏi đã có địa danh cụ thể, action này tìm các tour du lịch có điểm đến liên quan tới địa danh đó và gợi ý lại cho người dùng.
+Intent trong kịch bản: intent `ask_tour_for_place`.
+Entities liên quan:
+- `destination`: địa danh hoặc điểm đến cụ thể mà người dùng nêu.
+- Dựa trên địa danh, hệ thống có thể suy ra `province` bằng dữ liệu địa điểm, rồi lọc danh sách tour du lịch trong danh sách các tour du lịch có điểm đến tương ứng.
+2.4.6 Gợi ý địa điểm theo chủ đề
+Gợi ý các địa điểm phù hợp với một chủ đề du lịch nhất định, như du lịch biển, du lịch tâm linh, leo núi, cắm trại...
+Intent trong kịch bản: Gắn với `intent ask_place_by_theme` – các câu hỏi dạng “Chỗ nào phù hợp đi biển?”, “Ở miền Trung có địa điểm thiên nhiên nào đẹp?”.
+Entities liên quan:
+- `travel_theme`: chủ đề du lịch (biển, thiên nhiên, tâm linh, lịch sử, ẩm thực...).
+- Có thể kết hợp thêm `province` nếu người dùng đã nêu tỉnh trước đó, để chỉ gợi ý trong phạm vi một tỉnh cụ thể.
+2.4.7 Trả địa chỉ mua đặc sản
+Giúp người dùng tìm được địa chỉ (hoặc khu vực) mua một món đặc sản cụ thể mà người dùng đang quan tâm và muốn biết địa chỉ.
+Intent trong kịch bản: Gắn với intent `ask_food_address` – các câu hỏi như “Mua phở Hà Nội ở đâu?”, “Bún bò Huế chuẩn vị ăn ở chỗ nào?”.
+Entities liên quan:
+- `specialty`: tên đặc sản (phở Hà Nội, bún bò Huế, chả cá Lã Vọng, bánh mì Sài Gòn...).
+- Có thể suy ra hoặc kết hợp với `province` từ nội dung câu hỏi, hoặc từ trong dữ liệu đặc sản từng nơi, để xác định nơi bán phù hợp.
+2.4.8 Gợi ý đặc sản theo tỉnh/thành
+Trả về danh sách các món đặc sản tiêu biểu của một tỉnh/thành mà người dùng quan tâm.
+Intent trong kịch bản: Gắn với intent `ask_food_specialty` – các câu hỏi như “Đặc sản Đà Nẵng có gì?”, “Vào Huế nên ăn gì?”.
+Entities liên quan:
+- `province`: tỉnh/thành cần xem đặc sản.
+- Action tra trong file các món ăn đặc sản và trả lại danh sách các món đặc sản kèm địa chỉ khái quát.
+2.4.9 Reset ngữ cảnh hội thoại
+Xóa bớt các thông tin ngữ cảnh cũ (điểm đến, ngân sách, chủ đề…) khi người dùng đổi ý, giúp hệ thống không bị nhầm vào yêu cầu cũ và có thể bắt đầu lại một luồng tư vấn mới chính xác hơn.
+Intent trong kịch bản: Gắn với intent `change_mind` – các câu kiểu “đổi ý rồi”, “cho mình nhập lại từ đầu”, “muốn đổi điểm đến”, “muốn đổi ngân sách”…
+Entities liên quan:
+- Các ngữ cảnh thường được reset: `destination`, `travel_theme` và có thể cập nhật lại `province` nếu người dùng chọn một tỉnh mới.
+- Việc reset này để các action tư vấn tour du lịch và địa điểm về sau sẽ dựa trên thông tin mới nhất, không bị ảnh hưởng bởi yêu cầu trước đó.
+Tổng kết chương
+Chương 2 đã trình bày về xây dựng nội dung cho rasa chatbot với những phần như phân tích về yêu cầu và thiết kế nội dung cần dữ liệu cho nlu, xây dựng phản hồi cho chatbot.
+CHƯƠNG 3: PHÂN TÍCH VÀ THIẾT KẾ HỆ THỐNG
+Mô tả hệ thống
+3.1.1 Mục đích
+Hệ thống là một trang web giúp hỗ trợ bán các tour du lịch, giới thiệu về các tour du lịch và quản lý bán tour du lịch. Trong đó thì nhân viên hệ thống được quyền quản lý thông tin của người dùng, quản lý các tour du lịch, quản lý các đơn hàng, quản lý phân công, xem báo cáo thống kê, xem phản hồi từ phía khách hàng, cập nhật thông tin người dùng. Khách hàng có thể xem các tour du lịch, tìm kiếm, đặt các tour du lịch, chỉnh sửa thông tin cá nhân, hỏi chatbot để được đưa ra các đề xuất, xem thông báo, xem vé đã đặt, xem các đơn hàng, gửi phản hồi.
+3.1.2 Phạm vi
+Về đối tượng sử dụng, hệ thống cho phép các đối tượng sau được sử dụng: 
+- Nhân viên: Quản lý đơn hàng, xử lý lại các phản hồi từ bên phía khách hàng, đăng ký, đăng nhập, cập nhật thông tin cá nhân.
+- Quản lý: Quản lý nhân viên, quản lý khách hàng, quản lý mã giảm giá, quản lý tour du lịch và bao gồm các chức năng của nhân viên, xem thống kê doanh thu, xem thống kê tour theo doanh thu, xem thống kê khách hàng dựa theo doanh thu, xem thống kê tour dựa trên đánh giá, đăng ký, đăng nhập.
+- Hướng dẫn viên du lịch: Là người hướng dẫn cho khách hàng trong chuyến du lịch, xem thông tin tour du lịch mà mình đảm nhận, đăng ký, đăng nhập, cập nhật thông tin cá nhân.
+- Khách hàng: Đăng ký, đăng nhập, tìm kiếm tour du lịch, xem chi tiết tour du lịch, xem vé đã đặt, sử dụng mã giảm giá, đặt tour du lịch, thanh toán trực tuyến qua Momo, quản lý đơn hàng, đánh giá tour du lịch, xem thông báo, chỉnh sửa thông tin cá nhân, gửi phản hồi.
+3.1.3 Mô tả thông tin chung
+a) Thông tin các đối tượng được hệ thống quản lý:
+- Tour du lịch: id, mã tour, tên tour du lịch, mô tả, điểm xuất phát, ngày khởi hành, ngày kết thúc, độ dài một tour, giá, số vé tối đa cho một tour, đánh giá trung bình, tổng số đánh giá, kinh độ, vĩ độ, hình ảnh mô tả, trạng thái, khu vực.
+- Khách hàng: id, tên, email, mật khẩu, số điện thoại, avatar, giới tính, google id, trạng thái kích hoạt.
+- Nhân viên, quản lý, hướng dẫn viên du lịch: id, tên, email, mật khẩu, chức vụ, trạng thái, khu vực, số điện thoại.
+- Đơn hàng: id, mã đơn hàng, mã hướng dẫn viên, mã khách hàng, mã tour du lịch, số lượng vé, tổng tiền, trạng thái, ngày bắt đầu, ngày kết thúc, mã thanh toán, trạng thái thanh toán, trạng thái đánh giá.
+- Vé du lịch: id, mã vé, ngày phát hành, ngày có hiệu lực, ngày hết hiệu lực, trạng thái.
+- Phiếu giảm giá: id, mã giảm giá, mô tả, phần trăm giảm giá, số tiền giảm giá, ngày hết hạn, số lượng sử dụng tối đa, giới hạn giảm giá, trạng thái.
+- Danh mục: id, tên danh mục, mô tả.
+- Thông báo: id, mã người dùng, tiêu đề, tin nhắn, loại thông báo.
+- Phản hồi từ người dùng: id, mã người dùng, tiêu đề, tin nhắn, trạng thái.
+- Đánh giá: id, mã người dùng, mã tour, chi tiết đánh giá, xếp hạng.
+- Dịch vụ đi kèm: id, tên dịch vụ.
+- Dịch vụ không đi kèm: id, tên dịch vụ.
+- Lịch trình tour du lịch: id, số ngày, tiêu đề, chi tiết.
+- Bộ sưu tập ảnh: id, đường dẫn ảnh.
+- Ảnh đánh giá: id, mã đánh giá, đường dẫn ảnh.
+b)Thông tin về quan hệ các đối tượng:
+- 1 khách hàng có thể có nhiều đơn hàng, mỗi đơn hàng chỉ thuộc về một khách hàng.
+- 1 đơn hàng thì có thể có nhiều vé, mỗi vé chỉ thuộc về một đơn hàng.
+- 1 khách hàng có thể mua nhiều vé, mỗi vé chỉ thuộc về một khách hàng.
+- 1 khách hàng có thể viết nhiều đánh giá, mỗi đánh giá chỉ thuộc về một khách hàng.
+- 1 tour du lịch có thể nằm trong nhiều đơn hàng, mỗi đơn hàng chỉ thuộc một tour du lịch.
+- 1 một tour du lịch có thể có nhiều đánh giá, mỗi đánh giá chỉ thuộc về một tour du lịch.
+- 1 tour du lịch có thể có nhiều dịch vụ đi kèm, mỗi dịch vụ đi kèm chỉ thuộc về một tour du lịch.
+- 1 tour du lịch có thể có nhiều dịch vụ không đi kèm, mỗi dịch vụ không đi kèm chỉ thuộc về một tour du lịch
+- 1 tour du lịch có thể có nhiều lịch trình tour du lịch, mỗi lịch trình tour du lịch thì chỉ thuộc một tour du lịch.
+- 1 tour du lịch thì có nhiều bộ sưu tập ảnh, mỗi bộ sưu tập ảnh chỉ thuộc về một tour du lịch.
+- 1 đánh giá có thể có nhiều ảnh, mỗi ảnh chỉ thuộc về một đánh giá.
+- 1 khách hàng có thể có nhiều thông báo, mỗi thông báo có thể được đọc bởi một hoặc nhiều khách hàng.
+- 1 tour du lịch có thể đồng thời thuộc nhiều danh mục, mỗi danh mục cũng có thể xuất hiện trong nhiều tour du lịch.
+- 1 mã giảm giá có thể sử dụng bởi nhiều người dùng, một người dùng có thể sử dụng nhiều mã giảm giá.
+- 1 tour có thể được nhiều hướng dẫn viên tiếp quản, một hướng dẫn viên du lịch có thể tiếp quản nhiều tour du lịch.
+3.1.4 Thông tin về người dùng và chức năng
+a) Khách hàng: 
+- Đăng nhập.
+- Tìm kiếm tour du lịch. 
+- Xem danh sách tour du lịch.
+- Xem chi tiết tour du lịch. 
+- Đặt tour du lịch.
+- Quản lý đơn hàng.
+- Thanh toán trực tuyến qua Momo. 
+- Đánh giá tour. 
+- Chỉnh sửa thông tin cá nhân.
+- Xem vé đã đặt.
+- Gửi phản hồi cho phía nhân viên.
+b) Nhân viên:
+- Đăng nhập.
+- Quản lý đơn hàng.
+- Xem hướng dẫn viên được phân công cho tour.
+- Phản hồi lại khách hàng.
+- Cập nhật thông tin cá nhân.
+c) Quản lý:
+- Đăng nhập.
+- Quản lý người dùng
+- Quản lý đơn hàng.
+- Quản lý phân công.
+- Quản lý tour du lịch.
+- Xem thống kê.
+- Phản hồi lại người dùng.
+- Cập nhật thông tin cá nhân.
+d) Hướng dẫn viên du lịch:
+- Xem tour được phân công.
+- Cập nhật thông tin cá nhân.
+Hình 3. 1 Sơ đồ Use case tổng quan hệ thống
+Phân tích
+3.2.1 Mô tả nghiệp vụ chức năng
+Biểu đồ chi tiết cho từng chức năng và kịch bản chuẩn cho từng ngoại lệ
+a) Khách hàng:
+Đăng nhập:
+Hình 3. 2 Sơ đồ Use case cho chức năng đăng nhập
+Bảng 3. 1 Bảng mô tả chi tiết chức năng đăng nhập
+Use case
+Đăng nhập
+Actor
+Khách hàng
+Tiền điều kiện
+Khách hàng đã có tài khoản
+Hậu điều kiện
+Khách hàng đăng nhập thành công
+Kịch bản chính
+1. Giao diện đăng nhập hiện lên gồm: Tên đăng nhập email, Mật khẩu, nút Đăng nhập 
+2. Khách hàng nhập tài khoản email, mật khẩu và click vào nút đăng nhập 
+3. Hệ thống thông báo đăng nhập thành công và hiển thị giao diện người dùng tương ứng
+Kịch bản ngoại lệ
+4.1. Thông báo sai tài khoản hoặc mật khẩu và nút OK 4.1.1. Người dùng bấm OK quay lại giao diện Đăng nhập
+Xem chi tiết tour du lịch:
+Hình 3. 3 Sơ đồ Use case cho chức năng xem danh sách tour
+Bảng 3. 2 Mô tả chi tiết cho chức năng xem chi tiết tour du lịch
+Use case
+Xem chi tiết tour du lịch
+Actor
+Khách hàng
+Tiền điều kiện
+Khách hàng truy cập vào website của hệ thống
+Hậu điều kiện
+Khách hàng xem thông tin chi tiết của tour du lịch thành công.
+Kịch bản chính
+1. Khách hàng truy cập vào trang web.
+2. Khách hàng chuyển sang tab danh sách tour.
+3. Khách hàng click vào tour du lịch muốn xem chi tiết. 
+4. Giao diện hiển thị ra thông tin chi tiết của tour du lịch mà khách hàng cần xem.
+Kịch bản ngoại lệ
+- Tìm kiếm:
+Bảng 3. 3 Mô tả chi tiết cho chức năng tìm kiếm tour du lịch
+Use case
+Tìm kiếm tour du lịch
+Actor
+Khách hàng
+Tiền điều kiện
+Khách hàng truy cập vào website của hệ thống
+Hậu điều kiện
+Khách hàng tìm thấy tour du lịch muốn tìm.
+Kịch bản chính
+1. Khách hàng truy cập vào trang web.
+2. Khách hàng chuyển sang tab danh sách tour du lịch.
+3. Khách hàng nhập tên hoặc mã tour du lịch mà mình muốn tìm kiếm hoặc chọn điều kiện lọc dựa vào filter.
+4. Khách hàng click “Enter” hoặc nhấn vào biểu tượng kính lúp để tìm kiếm.
+5. Giao diện hiển thị ra tour du lịch mà khách hàng cần tìm.
+Kịch bản ngoại lệ
+5.1. Giao diện không trả về tour du lịch nào do người dùng nhập sai hoặc không có dữ liệu về tour du lịch khách hàng muốn tìm.
+Quản lý thông tin cá nhân:
+Hình 3. 4 Sơ đồ Use case cho chức năng quản lý thông tin cá nhân
+Bảng 3. 4 Mô tả chi tiết chức năng quản lý thông tin cá nhân
+Use case
+Quản lý thông tin cá nhân
+Actor
+Khách hàng
+Tiền điều kiện
+Khách hàng đăng nhập thành công.
+Hậu điều kiện
+Khách hàng cập nhật thông tin thành công.
+Kịch bản chính
+1. Sau khi đăng nhập thành công từ giao diện chính khách hàng di chuột vào biểu tượng avatar trên thanh công cụ rồi click vào tài khoản.
+2. Giao diện quản lý tài khoản hiện ra kèm nút chỉnh sửa thông tin.
+3. Khách hàng click vào nút “chỉnh sửa” để thay đổi thông tin cá nhân.
+4. Sau khi điền lại thông tin khách hàng chọn vào “lưu thay đổi” để cập nhật thông tin.
+5. Giao diện hiển thị thông báo thay đổi thông tin thành công.
+Kịch bản ngoại lệ
+4.1 Khách hàng không điền gì cả hoặc để trống một trường rồi click “lưu thay đổi”.
+4.1.2 Giao diện sẽ không cho người dùng lưu lại thay đổi và báo đỏ bên dưới các trường.
+Thay đổi mật khẩu:
+Hình 3. 5 Sơ đồ Use case thay đổi mật khẩu
+Bảng 3. 5 Mô tả chi tiết chức năng đổi mật khẩu
+Use case
+Đổi mật khẩu
+Actor
+Khách hàng
+Tiền điều kiện
+Khách hàng đăng nhập thành công.
+Hậu điều kiện
+Khách hàng đổi mật khẩu thành công.
+Kịch bản chính
+1. Sau khi đăng nhập thành công từ giao diện chính khách hàng di chuột vào biểu tượng avatar trên thanh công cụ rồi click vào Đổi mật khẩu.
+2. Giao diện đổi mật khẩu hiện ra kèm nút xác nhận và các trường cần điền.
+3. Khách hàng điền đầy đủ các trường rồi click “Xác nhận”.
+4. Thông báo hiển thị khách hàng đã đổi mật khẩu thành công.
+Kịch bản ngoại lệ
+3.1 Khách hàng không điền gì cả hoặc để trống một trường rồi click “Xác nhận”.
+4.1.2 Giao diện sẽ không cho người dùng lưu lại thay đổi và báo đỏ bên dưới các trường.
+Nhắn tin cho chatbot:
+Hình 3. 6 Sơ đồ Use case chức năng trò chuyện chatbot
+Bảng 3. 6 Mô tả chi tiết chức năng trò chuyện chatbot
+Use case
+Trò chuyện Chatbot rasa
+Actor
+Khách hàng
+Tiền điều kiện
+Khách hàng truy cập vào website của hệ thống
+Hậu điều kiện
+Khách hàng nhận được tư vấn, hỗ trợ từ chatbot.
+Kịch bản chính
+1. Khách hàng tại giao diện của hệ thống sẽ click vào biểu tượng trò chuyện bên phía góc phải màn hình.
+2. Bảng trò chuyện hiện ra.
+3. Khách hàng nhắn tin cho chatbot để hỏi theo mong muốn.
+4. Chatbot phân tích câu hỏi của khách hàng và phản hồi lại cho khách hàng.
+Kịch bản ngoại lệ
+Xem thông báo:
+Hình 3. 7 Sơ đồ Use case xem thông báo
+Bảng 3. 7 Mô tả chi tiết chức năng xem thông báo
+Use case
+Xem thông báo
+Actor
+Khách hàng
+Tiền điều kiện
+Khách hàng đăng nhập thành công
+Hậu điều kiện
+Khách hàng xem được thông báo.
+Kịch bản chính
+1. Khách hàng sau khi đăng nhập thành công sẽ từ trang chủ sẽ click vào biểu tượng thông báo trên góc phải màn hình.
+2. Danh sách thông báo hiện ra
+Kịch bản ngoại lệ
+Xem đơn hàng:
+Hình 3. 8 Sơ đồ Use case chức năng xem đơn hàng
+Bảng 3. 8 Mô tả chi tiết chức năng xem đơn hàng đã đặt
+Use case
+Xem đơn hàng
+Actor
+Khách hàng
+Tiền điều kiện
+Khách hàng đăng nhập thành công
+Hậu điều kiện
+Khách hàng xem được danh sách đơn hàng của mình.
+Kịch bản chính
+1. Khách hàng sau khi đăng nhập thành công sẽ từ trang chủ sẽ click vào “Đơn hàng” trên thanh công cụ.
+2. Giao diện sẽ chuyển sang trang hiển thị danh sách đơn hàng của khách hàng.
+Kịch bản ngoại lệ
+2.1 Giao diện không hiển thị ra đơn hàng nào do khách hàng chưa mua bất kỳ tour du lịch nào.
+Đánh giá đơn hàng:
+Bảng 3. 9 Mô tả chi tiết chức năng đánh giá đơn hàng.
+Use case
+Đánh giá đơn hàng
+Actor
+Khách hàng
+Tiền điều kiện
+Khách hàng đăng nhập thành công
+Hậu điều kiện
+Khách hàng đánh giá được đơn hàng của mình.
+Kịch bản chính
+1. Khách hàng sau khi đăng nhập thành công sẽ từ trang chủ sẽ click vào “Đơn hàng” trên thanh công cụ.
+2. Giao diện sẽ chuyển sang trang hiển thị danh sách đơn hàng của khách hàng.
+3. Khách hàng click vào xem đơn hàng đã kết thúc.
+4. Giao diện hiển thị các tour đã kết thúc.
+5. Khách hàng click đánh giá tour.
+6. Phần đánh giá hiện lên.
+7. Khách hàng điền thông tin và chọn hoàn thành.
+8. Giao diện hiển thị đánh giá thành công.
+Kịch bản ngoại lệ
+7.1 Khách hàng điền đánh giá ít hơn 10 ký tự.
+8.1 Giao diện báo lỗi và yêu cầu khách hàng phải ghi nhiều hơn 10 ký tự.
+Thanh toán đơn hàng:
+Hình 3. 9 Sơ đồ Use case chức năng thanh toán đơn hàng
+Bảng 3. 10 Mô tả chi tiết chức năng thanh toán đơn hàng
+Use case
+Thanh toán
+Actor
+Khách hàng
+Tiền điều kiện
+Khách hàng đăng nhập thành công
+Hậu điều kiện
+Khách hàng thanh toán thành công đơn hàng của mình.
+Kịch bản chính
+1. Khách hàng sau khi đăng nhập thành công sẽ từ trang chủ sẽ click vào xem danh sách tour.
+2. Giao diện sẽ chuyển sang trang hiển thị danh sách các tour du lịch.
+3. Khách hàng chọn một tour du lịch mong muốn rồi click vào.
+4. Giao diện chi tiết sẽ hiển thị lên.
+5. Khách hàng điền số lượng vé rồi click vào “Xác nhận” trong phần Đặt tour ngay.
+6. Giao diện thanh toán hiện lên để khách hàng thêm mã giảm giá hoặc thay đổi số lượng vé mua.
+7. Khách hàng click vào “Xác nhận thanh toán”.
+8. Màn hình hiển thị lại thông tin về đơn hàng và nút “Mở trang thanh toán”.
+9. Khách hàng click vào “Mở trang thanh toán”.
+10. Giao diện thanh toán của Momo hiện lên để người dùng thanh toán.
+11. Sau khi thanh toán thành công sau tầm 3 giây thì giao diện tự chuyển hướng về trang danh sách tour du lịch cùng với thông báo thanh toán thành công.
+Kịch bản ngoại lệ
+5.1. Khách hàng không điền số lượng vé rồi ấn “Xác nhận”.
+5.2. Thông báo lỗi đỏ bên dưới báo rằng cần điền thông tin.
+6.1. Khách hàng chỉnh số lượng vé về 0.
+6.2. Thông báo lỗi đỏ bên dưới báo rằng không được để trống số lượng vé.
+b) Nhân viên, quản lý:
+Quản lý đơn hàng:
+Hình 3. 10 Sơ đồ Use case chức năng quản lý đơn hàng
+- Cập nhật thông tin đơn hàng:
+Bảng 3. 11 Mô tả chi tiết chức năng cập nhật thông tin đơn hàng
+Use case
+Cập nhật thông tin đơn hàng
+Actor
+Nhân viên, quản lý
+Tiền điều kiện
+Nhân viên, quản lý đăng nhập thành công.
+Hậu điều kiện
+Nhân viên, quản lý cập nhật thông tin đơn hàng thành công.
+Kịch bản chính
+1. Sau khi đăng nhập thành công từ giao diện chính nhân viên click vào quản lý đơn hàng.
+2. Thanh điều hướng phía bên phải của quản lý đơn hàng hiện ra.
+3. Nhân viên click vào đơn hàng.
+4. Giao diện hiển thị ra danh sách các đơn hàng.
+5. Nhân viên click vào thùng rác để hủy đơn hàng.
+6. Thông báo hủy đơn hàng thành công.
+Kịch bản ngoại lệ
+5.1. Đơn hàng đã bị hủy từ trước nên không thể click.
+- Xem chi tiết đơn hàng:
+Bảng 3. 12 Mô tả chi tiết chức năng xem chi tiết đơn hàng
+Use case
+Xem chi tiết đơn hàng
+Actor
+Nhân viên, quản lý
+Tiền điều kiện
+Nhân viên, quản lý đăng nhập thành công.
+Hậu điều kiện
+Nhân viên, quản lý xem thông tin đơn hàng thành công.
+Kịch bản chính
+1. Sau khi đăng nhập thành công từ giao diện chính nhân viên click vào quản lý đơn hàng.
+2. Thanh điều hướng phía bên phải của quản lý đơn hàng hiện ra.
+3. Nhân viên click vào đơn hàng.
+4. Giao diện hiển thị ra danh sách các đơn hàng.
+5. Nhân viên click vào xem chi tiết để xem chi tiết đơn hàng.
+6. Giao diện hiển thị thông tin chi tiết đơn hàng.
+Kịch bản ngoại lệ
+-Tìm kiếm đơn hàng:
+Bảng 3. 13 Mô tả chi tiết tìm kiếm đơn hàng
+Use case
+Tìm kiếm đơn hàng
+Actor
+Nhân viên, quản lý
+Tiền điều kiện
+Nhân viên, quản lý đăng nhập thành công.
+Hậu điều kiện
+Nhân viên, quản lý tìm kiếm đơn hàng thành công.
+Kịch bản chính
+1. Sau khi đăng nhập thành công từ giao diện chính nhân viên click vào quản lý đơn hàng.
+2. Thanh điều hướng phía bên phải của quản lý đơn hàng hiện ra.
+3. Nhân viên click vào đơn hàng.
+4. Giao diện hiển thị ra danh sách các đơn hàng.
+5. Nhân viên nhập vào thanh tìm kiếm mã đơn hàng tìm kiếm và click vào tìm kiếm.
+6. Giao diện hiện thị đơn hàng cần tìm kiếm.
+Kịch bản ngoại lệ
+6.1 Giao diện không hiện thị do không có đơn hàng đúng theo tên cần tìm.
+- Cập nhật mã giảm giá:
+Bảng 3. 14 Mô tả chi tiết chức năng cập nhật mã giảm giá
+Use case
+Cập nhật mã giảm giá
+Actor
+Quản lý
+Tiền điều kiện
+Quản lý đăng nhập thành công.
+Hậu điều kiện
+Quản lý cập nhật mã giảm giá thành công.
+Kịch bản chính
+1. Sau khi đăng nhập thành công từ giao diện chính nhân viên click vào quản lý đơn hàng.
+2. Thanh điều hướng phía bên phải của quản lý đơn hàng hiện ra.
+3. Nhân viên click vào mã giảm giá.
+4. Giao diện hiển thị ra danh sách các mã giảm giá.
+5. Nhân viên click vào chỉnh sửa.
+6. Giao diện cập nhật thông tin mã giảm giá hiển thị lên.
+7. Quản lý thay đổi thông tin rồi click vào nút “OK”
+8. Giao diện thông báo thành công và quay về màn danh sách mã giảm giá.
+Kịch bản ngoại lệ
+7.1. Quản lý bỏ trống trường mã, giảm % hoặc lượt dùng tối đa rồi click OK.
+8.1. Giao diện thông báo lỗi và quay lại màn cập nhật thông tin mã giảm giá.
+- Thêm mã giảm giá:
+Bảng 3. 15 Mô tả chi tiết chức năng thêm mã giảm giá
+Use case
+Thêm mã giảm giá
+Actor
+Quản lý
+Tiền điều kiện
+Quản lý đăng nhập thành công.
+Hậu điều kiện
+Quản lý thêm mã giảm giá thành công.
+Kịch bản chính
+1. Sau khi đăng nhập thành công từ giao diện chính nhân viên click vào quản lý đơn hàng.
+2. Thanh điều hướng phía bên phải của quản lý đơn hàng hiện ra.
+3. Quản lý click vào mã giảm giá.
+4. Giao diện hiển thị ra danh sách các mã giảm giá.
+5. Quản lý click vào “Thêm mã”.
+6. Giao diện điền thông tin mã giảm giá hiển thị lên.
+7. Quản lý nhập thông tin rồi click vào nút “OK”
+8. Giao diện thông báo thành công và quay về màn danh sách mã giảm giá.
+Kịch bản ngoại lệ
+7.1. Quản lý điền trùng mã giảm giá đã có.
+8.1. Thông báo thêm mới không thành công do đã tồn tại mã giảm giá này rồi.
+7.2. Quản lý bỏ trống trường mã, giảm % hoặc lượt dùng tối đa rồi click OK.
+8.2. Giao diện thông báo lỗi và quay lại màn điền thông tin mã giảm giá.
+- Xóa mã giảm giá:
+Bảng 3. 16 Mô tả chi tiết xóa mã giảm giá
+Use case
+Xóa mã giảm giá
+Actor
+Quản lý
+Tiền điều kiện
+Quản lý đăng nhập thành công.
+Hậu điều kiện
+Quản lý xóa mã giảm giá thành công.
+Kịch bản chính
+1. Sau khi đăng nhập thành công từ giao diện chính nhân viên click vào quản lý đơn hàng.
+2. Thanh điều hướng phía bên phải của quản lý đơn hàng hiện ra.
+3. Nhân viên click vào mã giảm giá.
+4. Giao diện hiển thị ra danh sách các mã giảm giá.
+5. Nhân viên click vào biểu tượng xóa
+6. Giao diện cảnh báo về việc sắp xóa mã giảm giá.
+7. Quản lý xác nhận thông tin rồi chọn xác nhận.
+8. Giao diện thông báo thành công và quay về màn danh sách mã giảm giá.
+Kịch bản ngoại lệ
+Quản lý phản hồi:
+Hình 3. 11 Sơ đồ Use case hỗ trợ người dùng
+Bảng 3. 17 Mô tả chi tiết chức năng hỗ trợ người dùng
+Use case
+Quản lý phản hồi
+Actor
+Nhân viên, quản lý
+Tiền điều kiện
+Nhân viên, quản lý đăng nhập thành công.
+Hậu điều kiện
+Kịch bản chính
+1. Sau khi đăng nhập thành công từ giao diện chính nhân viên click vào hỗ trợ người dùng.
+2. Giao diện hiển thị ra phần hỗ trợ người dùng.
+Kịch bản ngoại lệ
+Xem phân công:
+Hình 3. 12 Sơ đồ Use case chức năng xem phân công
+- Xem tour được phân công:
+Bảng 3. 18 Mô tả chi tiết chức năng xem tour được phân công
+Use case
+Xem tour được phân công
+Actor
+Quản lý
+Tiền điều kiện
+Quản lý đăng nhập thành công
+Hậu điều kiện
+Kịch bản chính
+1. Sau khi đăng nhập thành công từ giao diện chính quản lý click vào phân công.
+2. Giao diện hiển thị ra lựa chọn “Tour được phân công” và “Hướng dẫn viên của tour”.
+3. Quản lý click vào xem “Tour được phân công”.
+4. Giao diện hiển thị danh sách các hướng dẫn viên du lịch hiện tại.
+5. Quản lý click vào xem tour của một hướng dẫn viên.
+6. Danh sách tour của nhân viên đó hiển thị ra.
+Kịch bản ngoại lệ
+- Xem hướng dẫn viên của tour:
+Bảng 3. 19 Mô tả chi tiết chức năng xem hướng dẫn viên của tour
+Use case
+Xem hướng dẫn viên của tour
+Actor
+Quản lý
+Tiền điều kiện
+Quản lý đăng nhập thành công.
+Hậu điều kiện
+Kịch bản chính
+1. Sau khi đăng nhập thành công từ giao diện chính quản lý click vào phân công.
+2. Giao diện hiển thị ra lựa chọn “Tour được phân công” và “Hướng dẫn viên của tour”.
+3. Quản lý click vào xem “Hướng dẫn viên của tour”.
+4. Giao diện hiển thị danh sách các tour du lịch hiện tại.
+5. Quản lý click vào xem hướng dẫn viên của tour.
+6. Hiển thị hướng dẫn viên hướng dẫn tour đó.
+Kịch bản ngoại lệ
+Quản lý thống kê:
+Hình 3. 13 Sơ đồ Use case chức năng quản lý thống kê
+- Thống kê khách hàng theo doanh thu:
+Bảng 3. 20 Mô tả chi tiết chức năng thống kê khách hàng theo doanh thu
+Use case
+Thống kê khách hàng theo doanh thu
+Actor
+Nhân viên, quản lý
+Tiền điều kiện
+Nhân viên, quản lý đăng nhập thành công.
+Hậu điều kiện
+Nhân viên, quản lý xem được thống kê về các khách hàng dựa trên doanh thu.
+Kịch bản chính
+1. Sau khi đăng nhập thành công từ giao diện chính nhân viên click vào Thống kê.
+2. Thanh điều hướng phía bên phải của thống kê hiện ra.
+3. Nhân viên click vào Người dùng.
+4. Giao diện hiển thị ra thống kê về khách hàng dựa trên doanh thu.
+5. Nhân viên chọn thời gian bắt đầu, thời gian kết thúc dựa trên loại thống kê.
+6. Giao diện hiển thị lại thống kê trong khoảng thời gian nhân viên lựa chọn.
+Kịch bản ngoại lệ
+- Thống kê tour du lịch theo doanh thu:
+Bảng 3. 21 Mô tả chi tiết chức năng thống kê doanh thu theo tour
+Use case
+Thống kê tour du lịch theo doanh thu
+Actor
+Nhân viên, quản lý
+Tiền điều kiện
+Nhân viên, quản lý đăng nhập thành công.
+Hậu điều kiện
+Nhân viên, quản lý xem được thống kê về các tour du lịch dựa trên doanh thu.
+Kịch bản chính
+1. Sau khi đăng nhập thành công từ giao diện chính nhân viên click vào Thống kê.
+2. Thanh điều hướng phía bên phải của thống kê hiện ra.
+3. Nhân viên click vào Tour.
+4. Giao diện hiển thị ra thống kê về tour du lịch dựa trên doanh thu.
+5. Nhân viên chọn thời gian bắt đầu, thời gian kết thúc dựa trên loại thống kê.
+6. Giao diện hiển thị lại thống kê trong khoảng thời gian nhân viên lựa chọn.
+Kịch bản ngoại lệ
+- Thống kê theo doanh thu:
+Bảng 3. 22 Mô tả chi tiết chức năng thống kê theo doanh thu
+Use case
+Thống kê theo doanh thu
+Actor
+Nhân viên, quản lý
+Tiền điều kiện
+Nhân viên, quản lý đăng nhập thành công.
+Hậu điều kiện
+Nhân viên, quản lý xem được thống kê dựa trên doanh thu.
+Kịch bản chính
+1. Sau khi đăng nhập thành công từ giao diện chính nhân viên click vào Thống kê.
+2. Thanh điều hướng phía bên phải của thống kê hiện ra.
+3. Nhân viên click vào Doanh thu.
+4. Giao diện hiển thị ra thống kê dựa trên doanh thu.
+5. Nhân viên chọn thời gian bắt đầu, thời gian kết thúc dựa trên loại thống kê.
+6. Giao diện hiển thị lại thống kê trong khoảng thời gian nhân viên lựa chọn.
+Kịch bản ngoại lệ
+Quản lý người dùng:
+Hình 3. 14 Sơ đồ Use case quản lý người dùng
+- Cập nhật trạng thái khách hàng:
+Bảng 3. 23 Mô tả chi tiết chức năng cập nhật trạng thái khách hàng
+Use case
+Cập nhật trạng thái khách hàng
+Actor
+Quản lý
+Tiền điều kiện
+Quản lý đăng nhập thành công.
+Hậu điều kiện
+Quản lý cập nhật trạng thái khách hàng thành công.
+Kịch bản chính
+1. Sau khi đăng nhập thành công từ giao diện chính quản lý click vào Quản lý tài khoản.
+2. Thanh điều hướng phía bên phải của Quản lý tài khoản hiện ra.
+3. Nhân viên click vào Khách hàng.
+4. Giao diện hiển thị ra trang quản lý trạng thái khách hàng.
+5. Quản lý click vào “khóa” hoặc “mở khóa” ở cột hành động để thay đổi trạng thái tài khoản khách hàng.
+6. Giao diện hiển thị thông báo thay đổi thành công.
+Kịch bản ngoại lệ
+- Thêm nhân viên mới:
+Bảng 3. 24 Mô tả chi tiết chức năng thêm mới nhân viên
+Use case
+Thêm nhân viên mới
+Actor
+Quản lý
+Tiền điều kiện
+Quản lý đăng nhập thành công.
+Hậu điều kiện
+Quản lý thêm mới nhân viên thành công.
+Kịch bản chính
+1. Sau khi đăng nhập thành công từ giao diện chính nhân viên click vào Thống kê.
+2. Thanh điều hướng phía bên phải của thống kê hiện ra.
+3. Quản lý click vào Thêm nhân viên.
+4. Giao diện điền thông tin cho nhân viên mới hiển thị.
+5. Quản lý điền các thông tin cần thiết của nhân viên để tạo tài khoản.
+6. Quản lý click Đăng ký.
+7. Thông báo tạo mới thành công.
+Kịch bản ngoại lệ
+6.1 Quản lý điền thiếu thông tin sẽ có thông báo đỏ điền thiếu thông tin.
+7.1. Thông báo tạo tài khoản không thành công vì đã tồn tại tài khoản trùng email.
+Quản lý tour du lịch:
+Hình 3. 15 Sơ đồ Use case quản lý tour du lịch
+- Thêm mới tour du lịch:
+Bảng 3. 25 Mô tả chi tiết chức năng thêm mới tour du lịch
+Use case
+Thêm mới tour du lịch
+Actor
+Quản lý
+Tiền điều kiện
+Quản lý đăng nhập thành công.
+Hậu điều kiện
+Quản lý thêm mới tour du lịch thành công.
+Kịch bản chính
+1. Sau khi đăng nhập thành công từ giao diện chính quản lý click vào Quản lý tour.
+2. Thanh điều hướng phía bên phải của Quản lý tour hiện ra.
+3. Nhân viên click vào Tour.
+4. Giao diện hiển thị ra trang quản lý thông tin tour du lịch hiện ra.
+5. Quản lý click thêm tour du lịch mới.
+6. Màn hình điền thông tin tour du lịch hiển thị lên màn hình.
+7. Quản lý điền đầy đủ thông tin rồi click “thêm tour”.
+8. Giao diện chuyển về màn hình quản lý thông tin tour du lịch kèm thông báo thêm tour du lịch thành công.
+Kịch bản ngoại lệ
+7.1 Quản lý điền thiếu trường cần thiết rồi click “thêm tour”.
+7.2 Giao diện báo lỗi và chuyển lại màn điền thông tin cùng với thông báo lỗi phía dưới các trường còn thiếu.
+- Cập nhật tour du lịch:
+Bảng 3. 26 Mô tả chi tiết chức năng cập nhật tour du lịch
+Use case
+Cập nhật tour du lịch
+Actor
+Quản lý
+Tiền điều kiện
+Quản lý đăng nhập thành công.
+Hậu điều kiện
+Quản lý cập nhật tour du lịch thành công.
+Kịch bản chính
+1. Sau khi đăng nhập thành công từ giao diện chính quản lý click vào Quản lý tour.
+2. Thanh điều hướng phía bên phải của Quản lý tour hiện ra.
+3. Nhân viên click vào Tour.
+4. Giao diện hiển thị ra trang quản lý thông tin tour du lịch hiện ra.
+5. Quản lý click xem thông tin tour du lịch.
+6. Màn hình thông tin của tour du lịch hiển thị lên.
+7. Quản lý chỉnh lại các thông tin mong muốn rồi click vào “Cập nhật tour”.
+8. Giao diện chuyển về màn hình quản lý thông tin tour du lịch kèm thông báo cập nhật tour du lịch thành công.
+Kịch bản ngoại lệ
+7.1 Quản lý điền thiếu trường cần thiết rồi click “Cập nhật tour”.
+7.2 Giao diện báo lỗi và chuyển lại màn điền thông tin cùng với thông báo lỗi phía dưới các trường còn thiếu.
+- Xóa tour du lịch:
+Bảng 3. 27 Mô tả chi tiết chức năng xóa tour du lịch
+Use case
+Xóa tour du lịch
+Actor
+Quản lý
+Tiền điều kiện
+Quản lý đăng nhập thành công.
+Hậu điều kiện
+Quản lý xóa tour du lịch thành công.
+Kịch bản chính
+1. Sau khi đăng nhập thành công từ giao diện chính quản lý click vào Quản lý tour.
+2. Thanh điều hướng phía bên phải của Quản lý tour hiện ra.
+3. Nhân viên click vào Tour.
+4. Giao diện hiển thị ra trang quản lý thông tin tour du lịch hiện ra.
+5. Quản lý click xóa tour du lịch.
+6. Một cảnh báo hiện lên để cảnh báo về xóa tour du lịch.
+7. Quản lý click vào xác nhận.
+8. Giao diện chuyển về màn hình quản lý thông tin tour du lịch kèm thông báo xóa tour du lịch thành công.
+Kịch bản ngoại lệ
+- Thêm mới một danh mục:
+Bảng 3. 28 Mô tả chi tiết chức năng thêm mới một danh mục
+Use case
+Thêm mới một danh mục
+Actor
+Quản lý
+Tiền điều kiện
+Quản lý đăng nhập thành công.
+Hậu điều kiện
+Quản lý thêm mới danh mục thành công.
+Kịch bản chính
+1. Sau khi đăng nhập thành công từ giao diện chính quản lý click vào Quản lý tour.
+2. Thanh điều hướng phía bên phải của Quản lý tour hiện ra.
+3. Nhân viên click vào Danh mục.
+4. Giao diện hiển thị ra trang quản lý danh mục hiện ra.
+5. Quản lý click thêm danh mục.
+6. Màn hình hiển thị phần điền thông tin mới cho danh mục.
+7. Quản lý điền thông tin cho danh mục mới rồi click lưu.
+8. Giao diện chuyển về màn hình quản lý danh mục kèm thông báo thêm mới thành công.
+Kịch bản ngoại lệ
+7.1 Quản lý không điền tên danh mục và click lưu.
+8.1 Thông báo lỗi và quay về màn điền thông tin danh mục.
+7.2 Quản lý điền trùng tên danh mục đã có sẵn.
+8.2 Thông báo đã tồn tại danh mục và quay về màn điền thông tin danh mục.
+- Cập nhật danh mục:
+Bảng 3. 29 Mô tả chi tiết chức năng cập nhật danh mục
+Use case
+Cập nhật danh mục
+Actor
+Quản lý
+Tiền điều kiện
+Quản lý đăng nhập thành công.
+Hậu điều kiện
+Quản lý cập nhật danh mục thành công.
+Kịch bản chính
+1. Sau khi đăng nhập thành công từ giao diện chính quản lý click vào Quản lý tour.
+2. Thanh điều hướng phía bên phải của Quản lý tour hiện ra.
+3. Nhân viên click vào Danh mục.
+4. Giao diện hiển thị ra trang quản lý danh mục hiện ra.
+5. Quản lý click “Sửa” với danh mục muốn thay đổi thông tin.
+6. Màn hình hiển thị phần Chỉnh sửa danh mục.
+7. Quản lý điền thông tin cho danh mục mới rồi click lưu.
+8. Giao diện chuyển về màn hình quản lý danh mục kèm thông báo thay đổi thành công.
+Kịch bản ngoại lệ
+7.1 Quản lý không điền tên danh mục và click lưu.
+8.1 Thông báo lỗi và quay về màn điền chỉnh sửa danh mục.
+7.2 Quản lý điền trùng tên danh mục đã có sẵn.
+8.2 Thông báo đã tồn tại danh mục và quay về màn điền chỉnh sửa danh mục.
+- Xóa danh mục:
+Bảng 3. 30 Mô tả chi tiết chức năng xóa danh mục
+Use case
+Xóa danh mục
+Actor
+Quản lý
+Tiền điều kiện
+Quản lý đăng nhập thành công.
+Hậu điều kiện
+Quản lý xóa danh mục thành công.
+Kịch bản chính
+1. Sau khi đăng nhập thành công từ giao diện chính quản lý click vào Quản lý tour.
+2. Thanh điều hướng phía bên phải của Quản lý tour hiện ra.
+3. Nhân viên click vào Danh mục.
+4. Giao diện hiển thị ra trang quản lý danh mục hiện ra.
+5. Quản lý click “Xóa” với danh mục muốn xóa.
+6. Cảnh báo hiển thị lên với cảnh báo về xóa danh mục.
+7. Quản lý click vào “xóa”.
+8. Giao diện chuyển về trang quản lý danh mục kèm thông báo xóa thành công.
+Kịch bản ngoại lệ
+c) Hướng dẫn viên du lịch:
+- Xem tour được phân công:
+Hình 3. 16 Sơ đồ Use case xem tour được phân công.
+Bảng 3. 31 Mô tả chi tiết chức năng xem tour được phân công.
+Use case
+Xem tour được phân công
+Actor
+Hướng dẫn viên du lịch
+Tiền điều kiện
+Hướng dẫn viên du lịch đăng nhập thành công.
+Hậu điều kiện
+Hướng dẫn viên du lịch xem thông tin thành công.
+Kịch bản chính
+1. Sau khi đăng nhập thành công từ giao diện chính chọn vào một tour muốn xem thông tin rồi click vào Khách hàng.
+2. Giao diện hiển thị danh sách khách hàng được phân công.
+Kịch bản ngoại lệ
+3.2.2 Trích các lớp thực thể của hệ thống
+a) Các lớp thực thể của hệ thống bao gồm:
+- Tour du lịch: tour
+- Khách hàng: user
+- Quản lý: Admin
+- Đơn hàng: Order
+- Vé du lịch: Ticket
+- Mã giảm giá: Coupon
+- Danh mục: Categories
+- Thông báo: Notification
+- Phản hồi từ khách hàng: Feedback
+- Đánh giá: Review
+- Dịch vụ đi kèm: Tour_include
+- Dịch vụ không đi kèm: Tour_exclude
+- Lịch trình tour du lịch: Tour_schedule
+- Bộ sưu tập ảnh: Tour_gallery
+- Ảnh đánh giá: Review_image
+b) Quan hệ giữa các lớp:
+- 1 khách hàng có thể có nhiều đơn hàng, mỗi đơn hàng chỉ thuộc về một khách hàng.
+- 1 đơn hàng thì có thể có nhiều vé, mỗi vé chỉ thuộc về một đơn hàng.
+- 1 khách hàng có thể mua nhiều vé, mỗi vé chỉ thuộc về một khách hàng.
+- 1 khách hàng có thể viết nhiều đánh giá, mỗi đánh giá chỉ do một khách hàng viết.
+- 1 tour du lịch có thể nằm trong nhiều đơn hàng, mỗi đơn hàng chỉ đặt được một tour du lịch.
+- 1 một tour du lịch có thể có nhiều đánh giá, mỗi đánh giá chỉ được đánh giá thuộc về một tour du lịch.
+- 1 tour du lịch có thể có nhiều dịch vụ đi kèm, mỗi dịch vụ đi kèm chỉ thuộc về một tour du lịch.
+- 1 tour du lịch có thể có nhiều dịch vụ không đi kèm, mỗi dịch vụ không đi kèm chỉ thuộc về một tour du lịch
+- 1 tour du lịch có thể có nhiều lịch trình tour du lịch, mỗi lịch trình tour du lịch thì chỉ thuộc một tour du lịch.
+- 1 tour du lịch thì có nhiều bộ sưu tập ảnh, mỗi bộ sưu tập ảnh chỉ thuộc về một tour du lịch.
+- 1 đánh giá có thể có nhiều ảnh, mỗi ảnh chỉ thuộc về một đánh giá.
+- 1 khách hàng có thể có nhiều thông báo, mỗi thông báo chỉ có thể được đọc bởi nhiều khách hàng  đề xuất Notification_read.
+- 1 tour du lịch có thể đồng thời thuộc nhiều danh mục, mỗi danh mục cũng có thể xuất hiện trong nhiều tour du lịch  đề xuất Tour_categories.
+- 1 mã giảm giá có thể sử dụng cho nhiều đơn hàng, cùng một đơn hàng có thể sử dụng nhiều mã giảm giá  đề xuất User_coupons.
+- 1 hướng dẫn viên du lịch có thể hướng dẫn nhiều tour du lịch, mỗi tour du lịch có thể được hướng dẫn bởi nhiều hướng dẫn viên  đề xuất Tour-guide.
+c) Các lớp được đề xuất:
+- Trạng thái thông báo: Notification_read.
+- Danh mục của tour du lịch: Tour_categories.
+- Vé giảm giá khách hàng sử dụng: User_coupons.
+- Bảng phân công tour cho hướng dẫn viên du lịch: Tour-guide.
+d) Biểu đồ thực thể lớp thực thể:
+Hình 3. 17 Sơ đồ lớp thực thể hệ thống
+Thiết kế cơ sở dữ liệu:
+Thông tin các bảng:
+- TblUser: Bảng lưu thông tin khách hàng.
+- TblTicket: Bảng lưu thông tin vé.
+- TblAdmin: Bảng lưu thông tin nhân viên và quản lý.
+- TblFeedback: Bảng lưu thông tin phản hồi của khách hàng.
+- TblCoupon: Bảng lưu thông tin về vé.
+- TblUser_coupon: Bảng lưu thông tin về đơn hàng nào sử dụng vé giảm giá nào. 
+- TblOrder: Bảng lưu thông tin về đơn hàng.
+- TblNotification: Bảng lưu các thông báo.
+- TblNotification_read: Bảng lưu trạng thái đọc của thông báo theo từng user.
+- TblCategories: Bảng lưu các danh mục.
+- TblTour_Categories: Bảng lưu thông tin về tour nào có các danh mục nào.
+- TblTour: Bảng lưu thông tin về tour.
+- TblTour_Include: Bảng lưu các dịch vụ đi kèm của tour.
+- TblTour_Exclude: Bảng lưu các dịch vụ không đi kèm của tour.
+- TblTour_gallery: Bảng lưu các ảnh của tour.
+- TblTour_Schedule: Bảng lưu các thông tin về lịch trình của tour.
+- TblReview: Bảng lưu thông tin về đánh giá tour.
+- TblReview_Image: Bảng lưu ảnh của các đánh giá.
+- TblTour-guide: Bảng lưu thông tin tour được phân công cho hướng dẫn viên.
+Hình 3. 18 Sơ đồ cơ sở dữ liệu hệ thống
+Thiết kế chi tiết từng chức năng
+3.4.1 Chức năng của khách hàng:
+Đăng nhập:
+Hình 3. 19 Sơ đồ tuần tự chức năng đăng nhập bằng email và mật khẩu
+Hình 3. 20 Sơ đồ tuần tự chức năng đăng nhập bằng Google
+Cập nhật thông tin cá nhân:
+Hình 3. 21 Sơ đồ tuần tự chức năng cập nhật thông tin cá nhân
+Xem danh sách tour du lịch:
+Hình 3. 22 Sơ đồ tuần tự chức năng xem danh sách tour du lịch
+Xem chi tiết một tour du lịch:
+Hình 3. 23 Sơ đồ tuần tự xem chi tiết một tour du lịch
+Đặt tour du lịch:
+Hình 3. 24 Sơ đồ tuần tự cho chức năng đặt tour du lịch-1
+Hình 3. 25 Sơ đồ tuần tự chức năng đặt tour du lịch-2
+Xem đơn hàng:
+Hình 3. 26 Sơ đồ tuần tự chức năng xem đơn hàng
+Xem vé:
+Hình 3. 27 Sơ đồ tuần tự chức năng xem vé
+Chat với chatbot:
+Hình 3. 28 Sơ đồ tuần tự chức năng chat với chatbot các câu hỏi đi kèm
+Hình 3. 29 Sơ đồ tuần tự chức năng chat với chatbot các câu hỏi về tour
+Gửi phản hồi:
+Hình 3. 30 Sơ đồ tuần tự chức năng gửi feedback
+3.4.2 Chức năng của quản lý, nhân viên, hướng dẫn viên du lịch:
+Đăng nhập:
+Hình 3. 31 Sơ đồ tuần tự chức năng đăng nhập phía admin
+Cập nhật thông tin nhân viên:
+Hình 3. 32 Sơ đồ tuần tự chức năng cập nhật thông tin
+Cập nhật trạng thái khách hàng:
+Hình 3. 33 Sơ đồ tuần tự chức năng cập nhật trạng thái khách hàng
+Cập nhật vai trò nhân viên:
+Hình 3. 34 Sơ đồ tuần tự chức năng cập nhật vai trò nhân viên
+Thêm mới nhân viên:
+Hình 3. 35 Sơ đồ tuần tự chức năng thêm mới nhân viên
+Hủy đơn hàng:
+Hình 3. 36 Sơ đồ tuần tự chức năng hủy đơn hàng
+Thêm mã giảm giá:
+Hình 3. 37 Sơ đồ tuần tự chức năng thêm mã giảm giá
+Cập nhật mã giảm giá:
+Hình 3. 38 Sơ đồ tuần tự chức năng cập nhật mã giảm giá
+Thêm mới tour:
+Hình 3. 39 Sơ đồ tuần tự chức năng thêm mới tour
+Cập nhật tour:
+Hình 3. 40 Sơ đồ tuần tự chức năng cập nhật tour
+Xóa tour du lịch:
+Hình 3. 41 Sơ đồ luồng tuần tự chức năng xóa tour
+Thêm mới danh mục:
+Hình 3. 42 Sơ đồ tuần tự chức năng thêm mới danh mục
+Cập nhật danh mục:
+Hình 3. 43 Sơ đồ tuần tự chức năng cập nhật danh mục
+Xem thống kê theo doanh thu:
+Hình 3. 44 Sơ đồ tuần tự chức năng xem thống kê theo doanh thu
+Xem thống kê tour:
+Hình 3. 45 Sơ đồ tuần tự chức năng xem thống kê tour
+Xem thống kê khách hàng dựa theo doanh thu:
+Hình 3. 46 Sơ đồ tuần tự chức năng thống kê theo doanh thu
+Xem tour được phân công:
+Hình 3. 47 Sơ đồ tuần tự chức năng xem tour được phân công
+3.2.3 Chức năng tự động phân công cho hướng dẫn viên:
+a) Mục tiêu:
+Chức năng tự động phân công hướng dẫn viên được xây dựng nhằm hỗ trợ quản trị viên trong việc gán hướng dẫn viên phù hợp cho các tour du lịch một cách tự động và không áp dụng với nhân viên thông thường. Thay vì thực hiện phân công thủ công, hệ thống sẽ dựa trên các tiêu chí phù hợp để phân công cho hướng dẫn viên phù hợp.
+Sử dụng thuật toán tham lam(Greedy Algorithm) dựa trên các tiêu chí ưu tiên, trong đó tại mỗi thời điểm hệ thống sẽ chọn hướng dẫn viên tốt nhất thỏa mãn các điều kiện hiện tại, nhằm đảm bảo hiệu quả vận hành và chất lượng dịch vụ.
+b) Mức độ ưu tiên:
+Ưu tiên 1: Áp dụng với guides cùng khu vực với tour.
+- Tìm guides không trùng lịch và có ít tour nhất.
+- Nếu không có, tìm guides trống lịch sớm nhất.
+Ưu tiên 2: Áp dụng với tất cả các guides:
+- Tìm guides không trùng lịch và có ít tour nhất
+- Nếu không có, tìm guides trống lịch sớm nhất 
+c) Tiêu chi dùng để đánh giá:
+- Tiêu chí 1: Cùng khu vực địa lý
+Hướng dẫn viên thuộc cùng khu vực với tour được ưu tiên nhằm đảm bảo sự am hiểu về địa phương và nâng cao chất lượng dịch vụ.
+- Tiêu chí 2: Không trùng lịch
+Hướng dẫn viên không được có tour nào diễn ra trong khoảng thời gian của tour mới, nhằm đảm bảo khả năng tham gia đầy đủ tour.
+- Tiêu chí 3: Số lượng tour đang đảm nhận ít nhất
+Hệ thống ưu tiên hướng dẫn viên có số lượng tour đang đảm nhận ít hơn để cân bằng khối lượng công việc.
+- Tiêu chí 4: Trống lịch sớm nhất
+Trong trường hợp không tìm được hướng dẫn viên đáp ứng đầy đủ các tiêu chí trên, hệ thống sẽ lựa chọn hướng dẫn viên có thời điểm kết thúc tour gần nhất trước ngày bắt đầu của tour mới.
+d) Tính độ phức tạp thuật toán:
+- Thời gian: O(G × A × log A).
+- Không gian: O(G × A).
+- Trong điều kiện G ≤ 100, A ≤ 20: Thời gian thực hiện việc phân chia tự động sẽ ít hơn 1 giây.
+Trong đó: 
+- G: Số lượng hướng dẫn viên đang hoạt động
+- A: Số lượng tour trung bình được phân công cho mỗi guides
+Tổng kết chương
+Chương 3 đã trình bày về đặc tả, phân tích và thiết kế của website bán tour du lịch bao gồm mô tả về hệ thống, phân tích về các chức năng nghiệp vụ, thiết kế cơ sở dữ liệu và thiết kế chi tiết các module chức năng. Nội dung chương tiếp theo sẽ trình bày kết quả cài đặt hệ thống.
+CHƯƠNG 4: CÀI ĐẶT VÀ THỬ NGHIỆM HỆ THỐNG
+Công cụ cài đặt, triển khai và thư viện hỗ trợ:
+4.1.1 Công cụ cài đặt:
+Visual Studio Code: Trình soạn thảo đa nền tảng, nhẹ nhưng mạnh của Microsoft, được dùng cho cả frontend React và backend Node/Express (hoặc Python/FastAPI nếu có). VS Code tích hợp Git, terminal nội bộ, hệ sinh thái extension phong phú (Prettier, ESLint) giúp chuẩn hóa code, cùng IntelliSense và debugger hỗ trợ phát triển nhanh, giảm lỗi và dễ tùy biến theo nhu cầu dự án.
+Postman: Công cụ thiết kế, kiểm thử và tài liệu hóa API. Trong dự án, Postman dùng để gửi/kiểm thử các request REST (GET/POST/PUT/DELETE) tới backend, xem phản hồi/trạng thái HTTP, viết script kiểm thử tự động bằng JavaScript, quản lý biến môi trường (environment) cho nhiều cấu hình, và chia sẻ collection/tài liệu API để làm việc nhóm hiệu quả, bảo đảm chất lượng dịch vụ backend.
+4.1.2 Công cụ triển khai:
+Node.js/Express [3]: Node.js là một nền tảng chạy JavaScript phía server dựa trên kiến trúc non-blocking I/O. Trên nền tảng này, Express được sử dụng như framework chính để xây dựng API backend cho hệ thống. Express nổi bật nhờ sự linh hoạt, cấu trúc đơn giản và khả năng mở rộng thông qua middleware, hỗ trợ hiệu quả các tính năng thiết yếu như xác thực người dùng (JWT Authentication), bảo mật CORS, ghi log, upload tệp và quản lý route. Toàn bộ biến cấu hình (kết nối cơ sở dữ liệu, JWT secret, khóa thanh toán MoMo, Google OAuth…) được quản lý thông qua file môi trường .env, giúp hệ thống dễ dàng chuyển đổi giữa các môi trường phát triển, kiểm thử và triển khai thực tế. Với ưu điểm gọn nhẹ, xử lý linh hoạt và cộng đồng hỗ trợ lớn, Node.js/Express là lựa chọn phù hợp cho các ứng dụng web có yêu cầu tốc độ và khả năng mở rộng.
+MySQL: MySQL là một hệ quản trị cơ sở dữ liệu mã nguồn mở phổ biến, được sử dụng rộng rãi trong các ứng dụng web và doanh nghiệp. Với khả năng lưu trữ và quản lý dữ liệu lớn một cách hiệu quả, MySQL hỗ trợ ngôn ngữ truy vấn SQL (Structured Query Language) để thao tác dữ liệu. Ưu điểm chính của MySQL bao gồm hiệu suất cao, độ tin cậy, và khả năng tích hợp linh hoạt với nhiều ngôn ngữ lập trình như PHP, Python, và Java. MySQL cũng cung cấp tính năng bảo mật mạnh mẽ, hỗ trợ cơ chế sao lưu và phục hồi dữ liệu dễ dàng. Ngoài ra, nó tương thích tốt với các nền tảng phổ biến như Windows, macOS, và Linux, khiến nó trở thành lựa chọn lý tưởng cho các ứng dụng thương mại điện tử, hệ thống quản lý nội dung (CMS), và cơ sở dữ liệu doanh nghiệp.
+Kho lưu trữ hình ảnh: Cloundinary là một nền tảng quản lý media trên đám mây toàn diện, chuyên dùng cho lưu trữ hình ảnh và video, cung cấp giải pháp từ tải lên (upload), lưu trữ (storage), xử lý/thao tác (transform), tối ưu hóa đến phân phối (delivery) qua CDN, giúp ứng dụng web/mobile quản lý tài nguyên hình ảnh hiệu quả, tự động hóa các tác vụ phức tạp và cải thiện tốc độ tải trang
+Môi trường thanh toán MoMo Test/Sandbox: MoMo Test/Sandbox là môi trường giả lập giao dịch do MoMo cung cấp nhằm hỗ trợ lập trình viên kiểm thử tính năng thanh toán trực tuyến trước khi triển khai thực tế. Trong môi trường này, hệ thống có thể mô phỏng đầy đủ các bước thanh toán bằng ứng dụng MoMo hoặc mã QR mà không làm phát sinh giao dịch thật. Môi trường sandbox cung cấp bộ khóa API, tài liệu chi tiết và các endpoint thử nghiệm, cho phép kiểm thử luồng thanh toán từ khởi tạo giao dịch, xử lý callback đến xác minh trạng thái. Điều này giúp đảm bảo tính ổn định, an toàn và chính xác của hệ thống trước khi triển khai trên môi trường production. Việc sử dụng MoMo Sandbox giúp giảm rủi ro, tiết kiệm chi phí và nâng cao trải nghiệm người dùng trong công đoạn kiểm thử.
+Quản lý mã nguồn và triển khai: Git/GitHub: Git được sử dụng làm hệ thống quản lý phiên bản mã nguồn, hỗ trợ hiệu quả cho việc làm việc nhóm qua các thao tác commit, branch, merge và pull request. Nền tảng GitHub đóng vai trò là kho lưu trữ mã nguồn trực tuyến, giúp theo dõi lịch sử thay đổi, phân quyền thành viên và bảo đảm an toàn dữ liệu dự án. Ngoài ra, GitHub cũng hỗ trợ tích hợp CI/CD thông qua GitHub Actions, cho phép tự động hóa quy trình kiểm tra, build và triển khai ứng dụng. Điều này giúp giảm thiểu lỗi thủ công và tăng tốc độ phát triển. Với khả năng hỗ trợ làm việc nhóm, theo dõi tiến độ và quản lý mã nguồn hiệu quả, Git/GitHub là nền tảng không thể thiếu trong quá trình phát triển và triển khai hệ thống.
+4.1.3 Thư viện hỗ trợ:
+Express (REST backend)
+Sequelize (ORM) + MySQL2 (driver CSDL)
+bcryptjs; jsonwebtoken; dotenv
+Google Auth Library; Nodemailer; Multer
+Socket.io (realtime server/client)
+React; React Router DOM; Axios
+Redux Toolkit; React Query
+Ant Design (+ Icons); TailwindCSS
+Leaflet (bản đồ); Recharts (biểu đồ); Swiper (trình chiếu)
+@react-oauth/google (đăng nhập Google)
+XLSX (xuất/nhập tệp); Zod (validation)
+Cloudinary SDK
+Vite; TypeScript
+Zod
+Rasa
+Kiến trúc hệ thống:
+Kiến trúc Monolithic
+Hệ thống được triển khai theo kiến trúc Monolithic Architecture, trong đó toàn bộ các thành phần xử lý nghiệp vụ, truy cập dữ liệu và giao tiếp với các dịch vụ bên ngoài được tích hợp trong một ứng dụng backend thống nhất. Việc triển khai theo mô hình này giúp đơn giản hóa quá trình cài đặt, cấu hình và vận hành hệ thống.
+a) Đối với lớp giao diện người dùng( UI Layer): Lớp giao diện người dùng (UI Layer) của hệ thống được cài đặt dưới dạng ứng dụng web sử dụng React. Các chức năng giao diện được tổ chức theo hai nhóm chính: giao diện dành cho khách hàng và giao diện dành cho quản lý, nhân viên và hướng dẫn viên du lịch.
+- Giao diện khách hàng cung cấp các chức năng như xem thông tin tour, đặt tour, thanh toán, quản lý vé, quản lý tài khoản và gửi phản hồi, đăng nhập tài khoản, đăng ký tạo tài khoản mới. 
+- Giao diện quản trị viên hỗ trợ các chức năng quản lý tour, quản lý đơn hàng, quản lý người dùng, theo dõi thống kê và hỗ trợ khách hàng, xem thông tin các tour được phân công của hướng dẫn viên du lịch.
+b) Đối với lớp trung gian (Middleware Layer): Đảm nhiệm chức năng xác thực người dùng thông qua cơ chế JSON Web Token (JWT). Đối với mỗi request gửi từ phía client, middleware kiểm tra tính hợp lệ của token nhằm xác định trạng thái đăng nhập cũng như danh tính khách hàng hoặc nhân viên. Đồng thời thực hiện xử lý và chuẩn hóa dữ liệu request, bao gồm việc phân tích dữ liệu JSON, cookie và các tham số truy vấn. Giúp các controller và service phía sau tập trung vào xử lý nghiệp vụ mà không phải xử lý các vấn đề liên quan đến dữ liệu đầu vào.
+c) Đối với lớp logic ứng dụng (Business Logic Layer): Chịu trách nhiệm xử lý toàn bộ các nghiệp vụ chính, đảm bảo các yêu cầu chức năng của hệ thống được thực hiện đúng theo quy trình nghiệp vụ đã thiết kế. Trong đó controller tiếp nhận yêu cầu từ client và chuyển giao việc xử lý nghiệp vụ cho các service tương ứng. Tiếp đó các service đóng vai trò thực hiện việc xử lý logic đối với chức năng tương ứng. Kèm theo các dịch vụ thêm để hỗ trợ hệ thống:
+- Dịch vụ thanh toán trực tuyến, tích hợp cổng thanh toán MoMo để xử lý giao dịch đặt tour chịu trách nhiệm tạo yêu cầu thanh toán, xử lý kết quả trả về từ cổng thanh toán và cập nhật trạng thái đơn hàng tương ứng, đảm bảo tính chính xác và an toàn của giao dịch.
+- Dịch vụ gửi email tự động được sử dụng để hỗ trợ các chức năng giao tiếp với người dùng, bao gồm gửi email xác nhận đặt tour, thông báo kết quả thanh toán và gửi mã xác thực trong quá trình đăng nhập hoặc đăng ký. Việc gửi email được thực hiện tự động theo các sự kiện phát sinh trong hệ thống đối với các sự kiện: tạo vé du lịch thành công, đặt lại mật khẩu thành công.
+- Dịch vụ giao tiếp thời gian thực được triển khai thông qua WebSocket nhằm hỗ trợ các chức năng như thông báo trực tiếp hỗ trợ khách hàng. Dịch vụ này giúp tăng tính tương tác giữa người dùng và hệ thống, đồng thời cải thiện khả năng phản hồi trong quá trình vận hành.
+d) Lớp truy cập dữ liệu (Data Access Layer): Chịu trách nhiệm tương tác trực tiếp với cơ sở dữ liệu MySQL và được cài đặt thông qua ORM Sequelize. Lớp này đóng vai trò tách biệt logic nghiệp vụ khỏi việc thao tác dữ liệu, giúp hệ thống dễ bảo trì và mở rộng.
+Data Access Layer bao gồm các model được xây dựng để ánh xạ với các bảng dữ liệu chính như người dùng, tour du lịch, đơn hàng, vé tour, đánh giá, phản hồi và các bảng liên kết. Mỗi model đại diện cho một thực thể trong hệ thống và được định nghĩa kèm theo các mối quan hệ giữa các bảng, phản ánh đúng cấu trúc dữ liệu của hệ thống để thực hiện các thao tác cơ bản trên dữ liệu như thêm mới, cập nhật, truy vấn và xóa dữ liệu, đồng thời hỗ trợ các truy vấn nâng cao phục vụ nghiệp vụ, bao gồm lọc dữ liệu theo điều kiện, phân trang và sắp xếp kết quả. Các truy vấn này được sử dụng trực tiếp trong các service để phục vụ các chức năng như hiển thị danh sách tour, quản lý đơn hàng và thống kê dữ liệu. Bên cạnh đó cơ chế transaction cũng được sử dụng nhằm bảo toản tính toàn vẹn và nhất quán của dữ liệu trong các nghiệp vụ như đặt tour và thanh toán để tránh trường hợp xảy ra trạng thái trung gian không hợp lệ.
+Mô hình hệ thống:
+Mô hình Client – Server
+Hình 3. 48 Mô hình hệ thống Client-Server
+Kiến trúc Client-Server [20] là một mô hình thiết kế phần mềm phổ biến được sử dụng để xây dựng các ứng dụng phần mềm có cấu trúc rõ ràng, dễ bảo trì và mở rộng. Mô hình này tách biệt các thành phần của một ứng dụng thành hai phần chính: Client và Server
+(Thêm ảnh)
+Máy khách (Client) là thiết bị của người dùng cuối dùng để truy cập và sử dụng các dịch vụ do hệ thống cung cấp. Client có thể là bất kỳ thiết bị nào có khả năng kết nối mạng như máy tính để bàn, laptop, máy tính bảng hay điện thoại thông minh. Các thiết bị này gửi yêu cầu (request) tới máy chủ và hiển thị kết quả trả về cho người dùng.
+Máy chủ (Server) là hệ thống máy tính có nhiệm vụ xử lý, lưu trữ dữ liệu và cung cấp dịch vụ cho các máy khách thông qua mạng. Máy chủ thường sở hữu cấu hình phần cứng mạnh hơn, được vận hành liên tục 24/7 và đảm bảo khả năng xử lý ổn định để đáp ứng nhiều yêu cầu đồng thời từ phía client.
+Cách thức hoạt động của mô hình Client – Server
+- Client gửi yêu cầu (Request): Khi người dùng thực hiện một thao tác như truy cập trang web, gửi biểu mẫu, tìm kiếm thông tin,… Client sẽ tạo ra một yêu cầu và gửi tới Server thông qua mạng. Yêu cầu này thường sử dụng các giao thức truyền thông phổ biến như HTTP/HTTPS.
+- Server tiếp nhận và xử lý yêu cầu: Sau khi nhận được request, Server sẽ phân tích nội dung yêu cầu, truy cập cơ sở dữ liệu (nếu cần) và thực hiện các nghiệp vụ tương ứng. Đây là nơi diễn ra các hoạt động chính như xác thực, tính toán, lưu trữ, cập nhật dữ liệu hoặc truy vấn thông tin.
+- Server tạo phản hồi (Response): Sau khi xử lý thành công, Server sẽ đóng gói kết quả dưới dạng phản hồi. Phản hồi có thể là dữ liệu JSON, HTML, thông báo trạng thái hoặc thông tin cần thiết khác để Client hiển thị cho người dùng.
+- Client nhận và hiển thị kết quả cho người dùng: Khi nhận được phản hồi từ Server, Client sẽ xử lý và cập nhật giao diện để hiển thị dữ liệu cho người dùng. Tùy vào công nghệ sử dụng, giao diện có thể được render lại toàn bộ hoặc chỉ cập nhật các thành phần cần thiết.
+- Kết nối có thể duy trì hoặc kết thúc: Trong các hệ thống thông thường, mỗi yêu cầu – phản hồi là một vòng giao tiếp độc lập. Tuy nhiên, các ứng dụng thời gian thực có thể sử dụng WebSocket hoặc các cơ chế duy trì kết nối lâu dài để trao đổi dữ liệu liên tục.
+Ưu điểm
+- Tập trung: Một trong những ưu điểm nổi bật của mô hình Client – Server là khả năng kiểm soát tập trung. Tất cả dữ liệu và tài nguyên quan trọng đều được lưu trữ tại một vị trí duy nhất trên Server. Điều này giúp quản lý dễ dàng quản lý, giám sát, cập nhật và xử lý sự cố trong hệ thống. Việc bảo trì hay nâng cấp cũng trở nên đơn giản hơn khi mọi thay đổi đều được thực hiện trực tiếp trên máy chủ.
+- Bảo mật: Với kiến trúc tập trung, dữ liệu trong mô hình Client – Server được bảo vệ tốt hơn nhờ các cơ chế phân quyền truy cập. Chỉ những người dùng được cấp tài khoản hợp lệ mới có thể truy cập và thao tác với dữ liệu. Ngoài ra, các bản sao lưu (backup) được lưu trữ tập trung giúp việc khôi phục dữ liệu khi xảy ra sự cố trở nên nhanh chóng và dễ dàng.
+- Khả năng mở rộng: Mô hình Client – Server hỗ trợ mở rộng tài nguyên một cách thuận tiện. Hệ thống có thể bổ sung thêm Client hoặc nâng cấp Server mà không làm gián đoạn toàn bộ hoạt động. Điều này phù hợp với các doanh nghiệp có nhu cầu mở rộng quy mô hoặc nâng cấp hiệu suất theo thời gian. Trong thực tế, mô hình này thường kết hợp với dịch vụ máy chủ ảo (VPS) để tăng tài nguyên linh hoạt khi cần.
+- Khả năng truy cập: Hoàn toàn không hề có sự phân biệt giữa các vị trí hay nền tảng với nhau. Tất cả mọi Client đều có khả năng đăng nhập được vào hệ thống mạng máy tính. Điều này sẽ giúp cho tất cả các nhân viên đều có thể truy cập thông tin của công ty một cách dễ dàng mà không cần phải dùng một terminal mode hoặc một bộ xử lý nào khác.
+Nhược điểm:
+- Tắc nghẽn lưu lượng: Nhược điểm lớn nhất của mô hình Client – Server là nguy cơ tắc nghẽn khi có quá nhiều Client đồng thời gửi yêu cầu (request) đến một Server. Khi tải truy cập tăng cao, máy chủ có thể phản hồi chậm hoặc thậm chí ngừng hoạt động (crash). Điều này ảnh hưởng trực tiếp đến khả năng truy cập và làm giảm hiệu suất toàn hệ thống. Để hạn chế rủi ro này, các tổ chức thường triển khai các giải pháp như cân bằng tải, dự phòng (Disaster Recovery) hoặc sử dụng hệ thống điều phối container như Kubernetes để tự động phân phối lưu lượng giữa nhiều server.
+- Phụ thuộc vào độ bền của máy chủ: Do kiến trúc tập trung, Server đóng vai trò trung tâm của toàn bộ hệ thống. Nếu Server gặp sự cố, bị tấn công hoặc gián đoạn hoạt động, toàn bộ dịch vụ phụ thuộc vào nó đều bị ảnh hưởng. Điều này khiến hệ thống có độ ổn định không cao nếu không được đầu tư hạ tầng và cơ chế sao lưu dự phòng đầy đủ.
+- Chi phí triển khai và vận hành cao: Việc xây dựng một Server có đủ tài nguyên, hiệu suất, bảo mật và khả năng chịu tải thường đòi hỏi chi phí lớn. Ngoài chi phí phần cứng, doanh nghiệp còn phải đầu tư vào phần mềm, hạ tầng mạng, không gian máy chủ hoặc dịch vụ đám mây. Đối với các tổ chức nhỏ, đây có thể là rào cản đáng kể.
+- Yêu cầu bảo trì liên tục: Server phải hoạt động liên tục 24/7 để đáp ứng mọi yêu cầu từ Client. Vì vậy, quá trình giám sát, bảo trì và xử lý sự cố phải được thực hiện thường xuyên. Doanh nghiệp cần có đội ngũ kỹ thuật hoặc quản trị hệ thống chuyên trách để đảm bảo server vận hành ổn định và an toàn. Điều này cũng góp phần làm tăng chi phí và yêu cầu nhân lực.
+- Giới hạn về tài nguyên cho Client: Trong mô hình Client – Server, các tài nguyên của Server không thể được sử dụng tùy ý từ Client. Người dùng không thể thực hiện những thao tác như chỉnh sửa dữ liệu trực tiếp trên máy chủ hoặc truy cập tài nguyên phần cứng của Client (ví dụ: không in tài liệu trực tiếp từ hệ thống web trừ khi có hỗ trợ cụ thể). Điều này tạo ra một số hạn chế trong tính linh hoạt của mô hình.
+Kết quả đạt được:
+4.4.1 Chức năng của khách hàng:
+- Đăng nhập:
+Hình 4. 1 Giao diện đăng nhập khách hàng
+- Đăng ký:
+Hình 4. 2 Giao diện đăng ký khách hàng
+- Xem các tour du lịch phổ biến:
+Hình 4. 3 Giao diện trang chủ hệ thống
+Hình 4. 4 Giao diện trang chủ hệ thống phần đề xuất tour
+- Xem chi tiết một tour du lịch:
+Hình 4. 5 Giao diện xem chi tiết tour du lịch
+- Tìm kiếm tour du lịch:
+Hình 4. 6 Giao diện xem danh sách tour du lịch
+- Sử dụng bộ lọc để lọc tour du lịch:
+Hình 4. 7 Giao diện tìm kiếm theo bộ lọc
+- Đặt tour du lịch:
+Hình 4. 8 Giao diện đặt hàng
+- Xem đơn hàng:
+Hình 4. 9 Giao diện xem đơn hàng
+- Xem vé:
+Hình 4. 10 Giao diện xem vé
+- Thanh toán đơn hàng với momo:
+Hình 4. 11 Trang thanh toán sử dụng Mono
+- Xem thông báo:
+Hình 4. 12 Giao diện xem thông báo
+- Phản hồi về phía đội ngũ hỗ trợ:
+Hình 4. 13 Giao diện phản hồi về phía quản lý
+- Sử dụng chatbot:
+Hình 4. 14 Giao diện nhắn tin chatbot
+4.4.2 Chức năng của nhân viên, quản lý, hướng dẫn viên du lịch:
+- Đăng nhập:
+Hình 4. 15 Giao diện đăng nhập admin
+- Quản lý người dùng:
+Hình 4. 16 Giao diện quản lý người dùng hệ thống
+- Quản lý nhân viên:
+Tại trang quản lý nhân viên cho phép quản lý có thể cập nhật trạng thái của nhân viên, cập nhật lại mật khẩu cho nhân viên, chỉnh sửa vai trò cho nhân viên.
+Hình 4. 17 Giao diện quản lý nhân viên
+Hình 4. 18 Giao diện quản lý khách hàng
+- Thêm nhân viên mới:
+Cho phép quản lý thêm tài khoản cho nhân viên mới, đồng thời phân quyền vai trò cho nhân viên mới.
+Hình 4. 19 Giao diện thêm nhân viên mới
+- Xem đơn hàng:
+Giao diện xem đơn hàng bao gồm các hành động đi kèm: Hủy đơn hàng hoặc xem chi tiết đơn hàng
+Hình 4. 20 Giao diện xem đơn hàng
+- Xem thông tin vé:
+Hình 4. 21 Giao diện xem mã giảm giá
+- Xem thống kê về doanh thu:
+Giao diện xem thống kê cho phép nhân viên và quản lý xem thông tin về tình hình lãi xuất, doanh thu trong khoảng thời gian mà mình muốn xem để từ đó đưa ra đánh giá về các tour du lịch.
+Hình 4. 22 Giao diện xem thống kê về doanh thu
+- Xem thống kê về các tour du lịch:
+Hình 4. 23 Giao diện xem thống kê các tour du lịch
+Hình 4. 24 Giao diện xem thống kê tour du lịch – dựa theo doanh thu
+Hình 4. 25 Giao diện xem thống kê tour dựa theo đánh giá người dùng
+- Xem thống kê về người dùng:
+Hình 4. 26 Giao diện xem thống kê người dùng dựa vào doanh thu
+- Quản lý các tour du lịch:
+Hình 4. 27 Giao diện quản lý tour du lịch
+- Giao diện cập nhật thông:
+Hình 4. 28 Giao diện cập nhật thông tin
+- Quản lý danh mục:
+Hình 4. 29 Giao diện quản lý danh mục
+- Quản lý phân công:
+Hình 4. 30 Giao diện xem hướng dẫn viên của tour
+Hình 4. 31 Giao diện xem hướng dẫn viên
+Hình 4. 32 Giao diện xem tour hướng dẫn của hướng dẫn viên
+Tổng kết chương:
+Chương 4 đã trình bày kết quả thử nghiệm của một số chức năng trong hệ thống. Một số chức năng chưa được tích hợp sẽ là mục tiêu hoàn thành đề tài trong thời gian tới.
+KẾT LUẬN
+Qua dự án “Phát triển hệ thống bán tour du lịch”, nhóm đã tiến hành nghiên cứu, phân tích và xây dựng một hệ thống quản lý và bán tour du lịch dựa trên nền tảng công nghệ web hiện đại. Hệ thống được thiết kế theo kiến trúc phân lớp rõ ràng, bao gồm giao diện người dùng (Frontend), tầng xử lý nghiệp vụ (Backend) và tầng dữ liệu (Database), đáp ứng các yêu cầu cơ bản của một hệ thống thương mại điện tử trong lĩnh vực du lịch.
+Việc tích hợp Rasa Chatbot vào hệ thống đã mang lại nhiều giá trị thực tiễn. Chatbot có khả năng tiếp nhận và xử lý ngôn ngữ tự nhiên, nhận diện ý định (intent) và thực thể (entity) của người dùng, từ đó đưa ra phản hồi phù hợp hoặc đề xuất các tour du lịch tương ứng. Giúp nâng cao tính tương tác và thông minh của hệ thống.
+Tuy nhiên, do giới hạn về thời gian và phạm vi nghiên cứu, hệ thống vẫn còn một số hạn chế như:
+- Chatbot mới chỉ hỗ trợ các kịch bản hội thoại cơ bản, chưa xử lý tốt các câu hỏi phức tạp hoặc hội thoại dài.
+- Chưa tích hợp các cổng thanh toán trực tuyến thực tế.
+- Chưa có cơ chế đánh giá hiệu suất và học tự động từ hành vi người dùng.
+b) Hướng phát triển trong tương lai
+Trong thời gian tới, hệ thống bán tour du lịch có thể được mở rộng và hoàn thiện hơn theo các hướng sau:
+Nâng cao khả năng của chatbot:
+- Mở rộng tập intent và entity để chatbot hiểu được nhiều ngữ cảnh phức tạp hơn.
+- Áp dụng các mô hình học sâu (Deep Learning) hoặc tích hợp các mô hình ngôn ngữ lớn (LLM) nhằm cải thiện chất lượng hội thoại.
+- Cho phép chatbot học từ lịch sử trò chuyện để đưa ra gợi ý tour phù hợp hơn với từng người dùng.
+TÀI LIỆU THAM KHẢO
+[1] 
+“Kiến trúc Microservices so với Monolithic và Modular: Lựa chọn phương pháp tiếp cận phù hợp,” pp. https://viblo.asia/p/kien-truc-microservices-so-voi-monolithic-va-modular-lua-chon-phuong-phap-tiep-can-phu-hop-W13VMrA74Y7. 
+[2] 
+“NodeJs,” [Trực tuyến]. Available: https://nodejs.org/docs/latest/api/.
+[3] 
+“Expressjs,” [Trực tuyến]. Available: https://expressjs.com/en/4x/api.html.
+[4] 
+“Typescriptlang,” [Trực tuyến]. Available: https://www.typescriptlang.org/docs/handbook.
+[5] 
+“Sequelize,” [Trực tuyến]. Available: https://sequelize.org/docs/v6/getting-started/.
+[6] 
+“MySQL, “Reference Manual,”,” [Trực tuyến]. Available: https://dev.mysql.com/doc/.
+[7] 
+“JSON Web Tokens, “JWT Handbook,”,” [Trực tuyến]. Available: https://jwt.io/introduction.
+[8] 
+“React, “State: A Component’s Memory,” React Documentation,,” [Trực tuyến]. Available: https://react.dev/learn/state-a-components-memory.
+[9] 
+“Virtual DOM and Internals – React,” [Trực tuyến]. Available: https://legacy.reactjs.org/docs/faq-internals.html.
+[10] 
+“Redux Toolkit, “Usage Guide,”,” [Trực tuyến]. Available: https://redux-toolkit.js.org/usage/usage-guide.
+[11] 
+“Redux Toolkit, “Usage Guide,”,” [Trực tuyến]. Available: https://redux-toolkit.js.org/usage/usage-guide.
+[12] 
+“Ant Design, “Component Library,”,” [Trực tuyến]. Available: https://ant.design/components/overview/.
+[13] 
+“Axios-http,” [Trực tuyến]. Available: https://axios-http.com/docs/intro.
+[14] 
+“Socket.io, “Real-time Communication,”,” [Trực tuyến]. Available: https://socket.io/docs/v4/.
+[15] 
+“Zod,” [Trực tuyến]. Available: https://zod.dev/.
+[16] 
+“cloudinary,” [Trực tuyến]. Available: https://cloudinary.com/documentation.
+[17] 
+P.H.Quang, “Enhancing Rasa NLU model for Vietnamese chatbot,” Rasa chatbot: Tăng khả năng chatbot với custom component và custom tokenization(tiếng Việt tiếng Nhật), pp. https://viblo.asia/p/rasa-chatbot-tang-kha-nang-chatbot-voi-custom-component-va-custom-tokenizationtieng-viet-tieng-nhat-Qbq5QN4mKD8, 16 /3 /2020. 
+[18] 
+M. S. Nguyen Thi Mai Trang, “RESEARCH, DESIGN, WEB-BASED PERSONAL VIRTUAL ASSISTANCE COMBINING MACHINE LEARNING AND NATURAL LANGUAGE PROCESSING”.
+[19] 
+B.T.Dũng, Artist, Xây dựng chatbot Messenger cập nhật thời khóa biểu cho sinh viên. [Art]. 2020. 
+[20] 
+V.T.M.Phương, “Sơ lược về mô hình Client-Server và giao thức HTTP,” pp. https://viblo.asia/p/so-luoc-ve-mo-hinh-client-server-va-giao-thuc-http-jvElaarNlkw, 16 /7 /2021. 
+[21] 
+“React, “Describing the UI,” React Documentation,” [Trực tuyến]. Available: https://react.dev/learn/describing-the-ui.

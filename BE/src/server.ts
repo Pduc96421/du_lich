@@ -17,7 +17,7 @@ import ticketService from './services/ticketService';
 // Import models để load tất cả associations
 import './models';
 
-// Load env vars
+// Load env vars (Trigger nodemon reload)
 dotenv.config();
 
 // Khởi tạo express app

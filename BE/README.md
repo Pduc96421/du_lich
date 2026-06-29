@@ -118,7 +118,7 @@ EMAIL_FROM=your_email@gmail.com
 VNPAY_TMN_CODE=DUJUBNF7
 VNPAY_HASH_SECRET=H5730102G9YFBOKHKU75MUQ90YY26HMC
 VNPAY_URL=https://sandbox.vnpayment.vn/paymentv2/vpcpay.html
-VNPAY_RETURN_URL=http://localhost:5000/api/payment/vnpay-return
+VNPAY_RETURN_URL=http://localhost:5000/api/v1/payment/vnpay-return
 ```
 
 ### 4. Thông tin thẻ Test VNPay (Sandbox)
@@ -230,8 +230,13 @@ npm run db:seed
 ```
 
 Seeders sẽ tạo:
-- 🔐 **Admin**: `admin@tourdulich.vn` / `Admin@123456`
-- 👥 **3 Users** (password: `User@123456`)
+- 🔐 **Admin & Employees** (mật khẩu chung: `Admin@123456`):
+  - **Super Admin**: `admin@tourmanager.com`
+  - **Content Manager**: `content@tourmanager.com`
+  - **Guide Bắc**: `guide_north@tourmanager.com`
+  - **Guide Trung**: `guide_central@tourmanager.com`
+  - **Guide Nam**: `guide_south@tourmanager.com`
+- 👥 **10 Users** (mật khẩu chung: `User@123456`)
 - 🏖️ **5 Tours** (Đà Lạt, Nha Trang, Hạ Long, Phú Quốc, Sapa)
 - 🎫 **10 Tickets** (adult/child cho mỗi tour)
 - 🎟️ **4 Coupons** (SUMMER2024, NEWYEAR2025, EARLYBIRD, FIRSTTIME)

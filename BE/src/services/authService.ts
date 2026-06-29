@@ -263,7 +263,7 @@ class AuthService {
     // Kiểm tra xem user có phải là admin không
     let role: 'user' | 'admin' = 'user';
     try {
-      const admin = await Admin.findByPk(userId);
+      const admin = await Admin.findOne({ where: { email: user.email } });
       if (admin && admin.is_active) {
         role = 'admin';
       }
@@ -400,7 +400,7 @@ class AuthService {
       
       // Kiểm tra xem user có phải là admin không
       try {
-        const admin = await Admin.findByPk(userId);
+        const admin = await Admin.findOne({ where: { email: user.email } });
         if (admin && admin.is_active) {
           role = 'admin';
         }

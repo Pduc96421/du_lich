@@ -3,6 +3,19 @@
 
 ---
 
+# Terminal 1 - Khởi động Backend
+cd /home/phamduc/Documents/code/du_lich/BE
+npm run dev
+
+# Terminal 2 - Khởi động Frontend  
+cd /home/phamduc/Documents/code/du_lich/fe-web-ban-tour-du-lich
+npm run dev
+
+# Terminal 3 - Chạy test (sau khi FE+BE đang chạy)
+cd /home/phamduc/Documents/code/du_lich/fe-web-ban-tour-du-lich
+npm run test:feedback
+
+
 ## 1) Bạn có cần cài thêm công cụ không?
 
 Để kiểm thử chức năng của mình, bạn cần **3 nhóm công cụ**:

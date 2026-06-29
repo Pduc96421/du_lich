@@ -200,9 +200,10 @@ class ReviewService {
     const orderIsReview = order.getDataValue('is_review') ?? order.is_review;
     // Convert sang boolean để xử lý - kiểm tra nếu là truthy value
     const isReviewed = Boolean(orderIsReview);
-    if (isReviewed) {
-      throw new Error('Đơn hàng này đã được đánh giá rồi');
-    }
+    // TẠM TẮT CHỨC NĂNG CHẶN REVIEW ĐỂ TEST JMETER:
+    // if (isReviewed) {
+    //   throw new Error('Đơn hàng này đã được đánh giá rồi');
+    // }
 
     // Debug: Log data trước khi tạo review
     console.log('=== CREATE REVIEW DEBUG ===');

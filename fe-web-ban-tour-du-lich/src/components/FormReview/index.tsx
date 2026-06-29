@@ -104,13 +104,15 @@ const handleFinish = async (values: any) => {
         onFinish={handleFinish}
         initialValues={{ rating: 5 }}
       >
-        <Form.Item label="Chất lượng sản phẩm" name="rating">
-          <div>
-            <Rate value={rating} onChange={(val) => { setRating(val); form.setFieldsValue({ rating: val }) }} />
-            <Typography.Text style={{ marginLeft: 8, color: "#FAAD14" }}>
+        <Form.Item label="Chất lượng sản phẩm">
+          <Space>
+            <Form.Item name="rating" noStyle>
+              <Rate allowClear={false} onChange={(val) => setRating(val)} />
+            </Form.Item>
+            <Typography.Text style={{ color: "#FAAD14" }}>
               {rateText[rating - 1]}
             </Typography.Text>
-          </div>
+          </Space>
         </Form.Item>
 
         <Form.Item
